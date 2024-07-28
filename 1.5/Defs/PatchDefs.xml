@@ -498,7 +498,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
-<!--  Experimental  -->
+<!--  Advanced  -->
     <!--  Unlimited postProcessCurve  -->
     <XmlExtensions.PatchDef Name="UnlimitedPostProcessCurve" Abstract="True">
         <parameters>

@@ -5,7 +5,7 @@
             <li>Ideology</li>
         </mods>
         <caseTrue>
-            <!-- Stats Pawns Ideo -->
+        <!-- Stats Pawns Ideo -->
             <!-- ConversionPower CapacityFactors -->
             <Operation Class="XmlExtensions.ApplyPatch">
                 <patchName>CapacityMaxRemoveIdeology</patchName>
@@ -18,7 +18,7 @@
                 </arguments>
             </Operation>
 
-            <!-- Stats Pawns WorkGeneral -->
+        <!-- Stats Pawns WorkGeneral -->
             <!-- SuppressionPower MaxValue -->
             <Operation Class="XmlExtensions.ApplyPatch">
                 <patchName>MaxValueRemoveWorkGeneral</patchName>
