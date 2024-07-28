@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<!--  Unlimited postProcessCurve  -->
+<!--  Stats Pawns Combat  -->
+    <!--  MeleeHitChance  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>UnlimitedPostProcessCurve</patchName>
+        <arguments>
+            <li>false</li>
+            <li>MeleeHitChance</li>
+            <li>defName</li>
+            <li>Melee hit chance</li>
+        </arguments>
+    </Operation>
+
+    <!--  MeleeDodgeChance  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>UnlimitedPostProcessCurve</patchName>
+        <arguments>
+            <li>true</li>
+            <li>MeleeDodgeChance</li>
+            <li>defName</li>
+            <li>Melee dodge chance</li>
+        </arguments>
+    </Operation>
+
+    <!--  ShootingAccuracyPawn  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>UnlimitedPostProcessCurve</patchName>
+        <arguments>
+            <li>false</li>
+            <li>ShootingAccuracyPawn</li>
+            <li>defName</li>
+            <li>Shooting accuracy</li>
+        </arguments>
+    </Operation>
+<!--  Stats Pawn WorkGeneral -->
+    <!--  HuntingStealth  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>UnlimitedPostProcessCurve</patchName>
+        <arguments>
+            <li>false</li>
+            <li>HuntingStealth</li>
+            <li>defName</li>
+            <li>Hunting stealth</li>
+        </arguments>
+    </Operation>
+
+<!--  Stats Pawn WorkMedical  -->
+    <!--  MedicalTendQuality  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>UnlimitedPostProcessCurve</patchName>
+        <arguments>
+            <li>false</li>
+            <li>MedicalTendQuality</li>
+            <li>defName</li>
+            <li>Medical tend quality</li>
+        </arguments>
+    </Operation>
+
+<!--  Stats Pawn WorkRecipes  -->
+    <!--  CookSpeed  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>UnlimitedPostProcessCurve</patchName>
+        <arguments>
+            <li>false</li>
+            <li>CookSpeed</li>
+            <li>defName</li>
+            <li>Cooking speed</li>
+        </arguments>
+    </Operation>
+
+<!-- ChangeSkillNeedFactors -->
+    <!--  MiningYield  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>ChangeSkillNeedFactors</patchName>
+        <arguments>
+            <li>false</li>
+            <li>MiningYield</li>
+            <li>defName</li>
+            <li>Mining yield</li>
+            <li>Mining</li>
+            <li>0.75</li>
+            <li>0.025</li>
+        </arguments>
+    </Operation>
+
+    <!--  AnimalGatherYield  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>ChangeSkillNeedFactors</patchName>
+        <arguments>
+            <li>false</li>
+            <li>AnimalGatherYield</li>
+            <li>defName</li>
+            <li>Animal gather yield</li>
+            <li>Animals</li>
+            <li>0.75</li>
+            <li>0.025</li>
+        </arguments>
+    </Operation>
+
+    <!--  PlantHarvestYield  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>ChangeSkillNeedFactors</patchName>
+        <arguments>
+            <li>false</li>
+            <li>PlantHarvestYield</li>
+            <li>defName</li>
+            <li>Plant harvest yield</li>
+            <li>Plants</li>
+            <li>0.75</li>
+            <li>0.025</li>
+        </arguments>
+    </Operation>
+
+    <!--  ConstructSuccessChance  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>ChangeSkillNeedFactors</patchName>
+        <arguments>
+            <li>false</li>
+            <li>ConstructSuccessChance</li>
+            <li>defName</li>
+            <li>Construction success chance</li>
+            <li>Construction</li>
+            <li>0.75</li>
+            <li>0.025</li>
+        </arguments>
+    </Operation>
+
+    <!--  FixBrokenDownBuildingSuccessChance  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>ChangeSkillNeedFactors</patchName>
+        <arguments>
+            <li>false</li>
+            <li>FixBrokenDownBuildingSuccessChance</li>
+            <li>defName</li>
+            <li>Repair success chance</li>
+            <li>Construction</li>
+            <li>0.75</li>
+            <li>0.025</li>
+        </arguments>
+    </Operation>
+
+    <!--  MedicalSurgerySuccessChance  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>ChangeSkillNeedFactors</patchName>
+        <arguments>
+            <li>false</li>
+            <li>MedicalSurgerySuccessChance</li>
+            <li>defName</li>
+            <li>Surgery success chance</li>
+            <li>Medicine</li>
+            <li>0.10</li>
+            <li>0.075</li>
+        </arguments>
+    </Operation>
+
+    <!--  PruningSpeed  -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>ChangeSkillNeedFactors</patchName>
+        <arguments>
+            <li>true</li>
+            <li>PruningSpeed</li>
+            <li>defName</li>
+            <li>Pruning speed</li>
+            <li>Plants</li>
+            <li>0.92</li>
+            <li>0.01</li>
+        </arguments>
+    </Operation>
+
+    <!-- Double PruningSpeed -->
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>FasterPruning</patchName>
+        <arguments>
+            <li>false</li>
+            <li>Plant_TreeGauranlen</li>
+            <li>defName</li>
+            <li>Pruning speed</li>
+        </arguments>
+    </Operation>
+</Patch>

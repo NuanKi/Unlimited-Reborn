@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Ideology</li>
+        </mods>
+        <caseTrue>
+            <!-- Stats Pawns Ideo -->
+            <!-- ConversionPower CapacityFactors -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>CapacityMaxRemoveIdeology</patchName>
+                <arguments>
+                    <li>true</li>
+                    <li>ConversionPower</li>
+                    <li>defName</li>
+                    <li>capacityFactors</li>
+                    <li>Conversion power</li>
+                </arguments>
+            </Operation>
+
+            <!-- Stats Pawns WorkGeneral -->
+            <!-- SuppressionPower MaxValue -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>MaxValueRemoveWorkGeneral</patchName>
+                <arguments>
+                    <li>true</li>
+                    <li>SuppressionPower</li>
+                    <li>defName</li>
+                    <li>Suppression power</li>
+                </arguments>
+            </Operation>
+
+            <!-- HackingSpeed CapacityFactors -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+                <arguments>
+                    <li>true</li>
+                    <li>HackingSpeed</li>
+                    <li>defName</li>
+                    <li>capacityFactors</li>
+                    <li>Hacking speed</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+</Patch>

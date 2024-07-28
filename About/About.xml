@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Un-Limited Reborn</name>
+    <author>NuanKi</author>
+    <packageId>NuanKi.UnlimitedReborn</packageId>
+    <description>
+Un-Limited Reborn: Because Flesh is So Last Season
+
+Still stuck with those pathetic flesh limitations? Welcome to Un-Limited Reborn—the mod that laughs in the face of your colonists’ biological constraints!
+
+Why settle for ordinary when you can have your bionics shatter the pitiful barriers of mere mortal stats? With Un-Limited Reborn, we’ve kicked those old, boring limits to the curb and let your bionic enhancements go wild. Who needs weak, squishy flesh holding you back when you can break the boundaries and make those stats truly extraordinary?
+    </description>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>Imranfish.XMLExtensions</packageId>
+            <displayName>XML Extensions</displayName>
+            <downloadUrl>https://github.com/15adhami/XmlExtensions/releases</downloadUrl>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2574315206</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Imranfish.XMLExtensions</li>
+        <li>Mlie.SYRHarvestYield</li>
+    </loadAfter>
+</ModMetaData>
