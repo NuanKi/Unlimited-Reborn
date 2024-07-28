@@ -17,7 +17,7 @@
     <Operation Class="XmlExtensions.ApplyPatch">
         <patchName>UnlimitedPostProcessCurve</patchName>
         <arguments>
-            <li>true</li>
+            <li>false</li>
             <li>MeleeDodgeChance</li>
             <li>defName</li>
             <li>Melee dodge chance</li>

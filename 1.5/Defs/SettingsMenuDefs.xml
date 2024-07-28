@@ -62,6 +62,10 @@
                 <text>Skill Need Factors Type:</text>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
+            <li Class="XmlExtensions.Setting.Text">
+                <text>For more info see the Wiki</text>
+            </li>
+            <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.ResetSettings"/>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
