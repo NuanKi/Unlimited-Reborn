@@ -8,37 +8,40 @@
         <!-- Stats Pawns Ideo -->
             <!-- ConversionPower CapacityFactors -->
             <Operation Class="XmlExtensions.ApplyPatch">
-                <patchName>CapacityMaxRemoveIdeology</patchName>
+                <patchName>Reborn_RemoveLimit</patchName>
                 <arguments>
-                    <li>true</li>
                     <li>ConversionPower</li>
                     <li>defName</li>
-                    <li>capacityFactors</li>
                     <li>Conversion power</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Ideology</li>
                 </arguments>
             </Operation>
 
         <!-- Stats Pawns WorkGeneral -->
             <!-- SuppressionPower MaxValue -->
             <Operation Class="XmlExtensions.ApplyPatch">
-                <patchName>MaxValueRemoveWorkGeneral</patchName>
+                <patchName>Reborn_RemoveMaxValue</patchName>
                 <arguments>
-                    <li>true</li>
                     <li>SuppressionPower</li>
                     <li>defName</li>
                     <li>Suppression power</li>
+                    <li>true</li>
+                    <li>Ideology</li>
                 </arguments>
             </Operation>
 
             <!-- HackingSpeed CapacityFactors -->
             <Operation Class="XmlExtensions.ApplyPatch">
-                <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+                <patchName>Reborn_RemoveLimit</patchName>
                 <arguments>
-                    <li>true</li>
                     <li>HackingSpeed</li>
                     <li>defName</li>
-                    <li>capacityFactors</li>
                     <li>Hacking speed</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Ideology</li>
                 </arguments>
             </Operation>
         </caseTrue>

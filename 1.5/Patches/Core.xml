@@ -1,551 +1,634 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-<!-- Stats Apparel -->
+    <!-- Stats Apparel -->
     <!-- ArmorRatingBase MaxValue -->
-    <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveApparel</patchName>
-        <arguments>
-            <li>false</li>
-            <li>ArmorRatingBase</li>
-            <li>@Name</li>
-            <li>Armor rating base</li>
 
-        </arguments>
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseFalse>
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveMaxValue</patchName>
+                <arguments>
+                    <li>ArmorRatingBase</li>
+                    <li>@Name</li>
+                    <li>Armor rating base</li>
+                    <li>false</li>
+                    <li>Apparel</li>
+                </arguments>
+            </Operation>
+        </caseFalse>
     </Operation>
 
-<!-- Stats Pawns Combat  -->
+    <!-- Stats Pawns Combat  -->
     <!-- MeleeHitChance CapacityOffsets -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveCombat</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>MeleeHitChance</li>
             <li>defName</li>
-            <li>capacityOffsets</li>
             <li>Melee hit chance</li>
+            <li>true</li>
+            <li>capacityOffsets</li>
+            <li>Combat</li>
         </arguments>
     </Operation>
 
-    <!-- MeleeDodgeChance CapacityOffsets -->
-    <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveCombat</patchName>
-        <arguments>
-            <li>true</li>
-            <li>MeleeDodgeChance</li>
-            <li>defName</li>
-            <li>capacityOffsets</li>
-            <li>Melee dodge chance</li>
-        </arguments>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseTrue>
+            <!-- MeleeDodgeChance CapacityOffsets -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>MeleeDodgeChance</li>
+                    <li>defName</li>
+                    <li>Melee dodge chance</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+        <caseFalse>
+            <!-- MeleeDodgeChance CapacityOffsets -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>MeleeDodgeChance</li>
+                    <li>defName</li>
+                    <li>Melee dodge chance</li>
+                    <li>true</li>
+                    <li>capacityOffsets</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseFalse>
     </Operation>
 
-    <!-- ShootingAccuracyPawn CapacityOffsets -->
-    <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveCombat</patchName>
-        <arguments>
-            <li>true</li>
-            <li>ShootingAccuracyPawn</li>
-            <li>defName</li>
-            <li>capacityOffsets</li>
-            <li>Ranged cooldown multiplier</li>
-        </arguments>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseFalse>
+            <!-- ShootingAccuracyPawn CapacityOffsets -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>ShootingAccuracyPawn</li>
+                    <li>defName</li>
+                    <li>Ranged cooldown multiplier</li>
+                    <li>true</li>
+                    <li>capacityOffsets</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseFalse>
     </Operation>
 
     <!-- MortarMissRadius CapacityOffsets -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveCombat</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>MortarMissRadiusFactor</li>
             <li>defName</li>
-            <li>capacityOffsets</li>
             <li>Mortar miss radius multiplier</li>
+            <li>true</li>
+            <li>capacityOffsets</li>
+            <li>Combat</li>
         </arguments>
     </Operation>
 
-<!-- Stats Pawns General -->
+    <!-- Stats Pawns General -->
     <!-- ForagedNutritionPerDay CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>ForagedNutritionPerDay</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Foraged food amount</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>General</li>
         </arguments>
     </Operation>
 
     <!-- PainShockThreshold MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveGeneral</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>false</li>
             <li>PainShockThreshold</li>
             <li>defName</li>
             <li>Pain shock threshold</li>
+            <li>false</li>
+            <li>General</li>
         </arguments>
-</Operation>
+    </Operation>
 
-<!-- Stats Pawns Social -->
+    <!-- Stats Pawns Social -->
     <!-- NegotiationAbility CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveSocial</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>NegotiationAbility</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Negotiation ability</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Social</li>
         </arguments>
     </Operation>
 
     <!-- ArrestSuccessChance MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveSocial</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>true</li>
             <li>ArrestSuccessChance</li>
             <li>defName</li>
             <li>Arrest success chance</li>
+            <li>true</li>
+            <li>Social</li>
         </arguments>
     </Operation>
 
     <!-- ArrestSuccessChance CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveSocial</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>ArrestSuccessChance</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Arrest success chance</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Social</li>
         </arguments>
     </Operation>
 
     <!-- TradePriceImprovement MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveSocial</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>false</li>
             <li>TradePriceImprovement</li>
             <li>defName</li>
             <li>Trade price improvement</li>
+            <li>false</li>
+            <li>Social</li>
         </arguments>
     </Operation>
 
     <!-- TradePriceImprovement CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveSocial</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>TradePriceImprovement</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Trade price improvement</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Social</li>
         </arguments>
     </Operation>
 
     <!-- SocialImpact CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveSocial</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>SocialImpact</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Social impact</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Social</li>
         </arguments>
     </Operation>
 
     <!-- TameAnimalChance CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveSocial</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>TameAnimalChance</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Tame animal chance</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Social</li>
         </arguments>
     </Operation>
 
     <!-- TrainAnimalChance CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveSocial</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>TrainAnimalChance</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Train animal chance</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Social</li>
         </arguments>
     </Operation>
 
-<!-- Stats Pawns WorkGeneral -->
+    <!-- Stats Pawns WorkGeneral -->
     <!-- MiningSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>MiningSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Mining Speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- DeepDrillingSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>DeepDrillingSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Deep drilling speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- MiningYield MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>true</li>
             <li>MiningYield</li>
             <li>defName</li>
             <li>Mining yield</li>
+            <li>true</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- MiningYield CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>MiningYield</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Mining yield</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- SmoothingSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>SmoothingSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Smoothing speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- IntellectualSkillBase CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>IntellectualSkillBase</li>
             <li>@Name</li>
-            <li>capacityFactors</li>
             <li>Intellectual skill base</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- AnimalGatherSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>AnimalGatherSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Animal gather speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- AnimalGatherYield MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>true</li>
             <li>AnimalGatherYield</li>
             <li>defName</li>
             <li>Animal gather yield</li>
+            <li>true</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- AnimalGatherYield CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>AnimalGatherYield</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Animal gather yield</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- PlantWorkSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>PlantWorkSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Plant work speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- PlantHarvestYield  MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>true</li>
             <li>PlantHarvestYield</li>
             <li>defName</li>
             <li>Plant harvest yield</li>
+            <li>true</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- PlantHarvestYield CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>PlantHarvestYield</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Plant harvest yield</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- DrugHarvestYield MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>true</li>
             <li>DrugHarvestYield</li>
             <li>defName</li>
             <li>Drug harvest yield</li>
+            <li>true</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- ConstructionSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>ConstructionSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Construction speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- ConstructSuccessChance MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>true</li>
             <li>ConstructSuccessChance</li>
             <li>defName</li>
             <li>Construct success chance</li>
+            <li>true</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- ConstructSuccessChance CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>ConstructSuccessChance</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Construct success chance</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- FixBrokenDownBuildingSuccessChance MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>true</li>
             <li>FixBrokenDownBuildingSuccessChance</li>
             <li>defName</li>
             <li>Repair success chance</li>
+            <li>true</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
     <!-- FixBrokenDownBuildingSuccessChance CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>FixBrokenDownBuildingSuccessChance</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Repair success chance</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
-   <!-- ReadingSpeed CapacityFactors -->
+    <!-- ReadingSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkGeneral</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>ReadingSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Reading speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work General</li>
         </arguments>
     </Operation>
 
-<!-- Stats Pawns WorkMedical -->
+    <!-- Stats Pawns WorkMedical -->
     <!-- MedicalTendSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkMedical</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>MedicalTendSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Medical tend speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Medical</li>
         </arguments>
     </Operation>
 
     <!-- MedicalTendQuality CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkMedical</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>MedicalTendQuality</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Medical tend quality</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Medical</li>
         </arguments>
     </Operation>
 
     <!-- MedicalOperationSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkMedical</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>MedicalOperationSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Medical operation speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Medical</li>
         </arguments>
     </Operation>
 
     <!-- MedicalSurgerySuccessChance CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkMedical</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>MedicalSurgerySuccessChance</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Medical surgery success chance</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Medical</li>
         </arguments>
     </Operation>
 
-<!-- Stats Pawns WorkRecipes -->
+    <!-- Stats Pawns WorkRecipes -->
     <!-- SmeltingSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkRecipes</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>SmeltingSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Smelting speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Recipes</li>
         </arguments>
     </Operation>
 
     <!-- GeneralLaborSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkRecipes</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>GeneralLaborSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>General labor speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Recipes</li>
         </arguments>
     </Operation>
 
     <!-- DrugSynthesisSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkRecipes</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>DrugSynthesisSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Drug synthesis speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Recipes</li>
         </arguments>
     </Operation>
 
     <!-- CookSpeed CapacityOffsets -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkRecipes</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>CookSpeed</li>
             <li>defName</li>
-            <li>capacityOffsets</li>
             <li>Cooking speed</li>
+            <li>true</li>
+            <li>capacityOffsets</li>
+            <li>Work Recipes</li>
         </arguments>
     </Operation>
 
     <!-- DrugCookingSpeed CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkRecipes</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>DrugCookingSpeed</li>
             <li>defName</li>
-            <li>capacityFactors</li>
             <li>Drug cooking speed</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Recipes</li>
         </arguments>
     </Operation>
 
     <!-- ButcherySpeedBase CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkRecipes</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>ButcherySpeedBase</li>
             <li>@Name</li>
-            <li>capacityFactors</li>
             <li>Butchery speed base</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Recipes</li>
         </arguments>
     </Operation>
 
     <!-- ButcheryEfficiencyBase MaxValue -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>MaxValueRemoveWorkRecipes</patchName>
+        <patchName>Reborn_RemoveMaxValue</patchName>
         <arguments>
-            <li>true</li>
             <li>ButcheryEfficiencyBase</li>
             <li>@Name</li>
             <li>Butchery efficiency base</li>
+            <li>true</li>
+            <li>Work Recipes</li>
         </arguments>
     </Operation>
 
     <!-- ButcheryEfficiencyBase CapacityFactors -->
     <Operation Class="XmlExtensions.ApplyPatch">
-        <patchName>CapacityMaxRemoveWorkRecipes</patchName>
+        <patchName>Reborn_RemoveLimit</patchName>
         <arguments>
-            <li>true</li>
             <li>ButcheryEfficiencyBase</li>
             <li>@Name</li>
-            <li>capacityFactors</li>
             <li>Butchery efficiency base</li>
+            <li>true</li>
+            <li>capacityFactors</li>
+            <li>Work Recipes</li>
         </arguments>
     </Operation>
 </Patch>

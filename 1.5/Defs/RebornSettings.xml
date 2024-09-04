@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Limit Settings -->
+    <XmlExtensions.PatchDef Name="Reborn_LimitSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+            <li>tag</li>
+        </parameters>
+        <apply>
+            <!-- Adding a checkbox to the settings menu -->
+            <Operation Class="PatchOperationInsert">
+                <xpath>
+                    Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]
+                </xpath>
+                <order>Prepend</order>
+                <value>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>{defName}_Caps</key>
+                        <label>{label} - Remove Limit</label>
+                        <defaultValue>{defaultState}</defaultValue>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <!-- Max Value Settings -->
+    <XmlExtensions.PatchDef Name="Reborn_MaxValueSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+            <li>tag</li>
+        </parameters>
+        <apply>
+            <!-- Adding a checkbox to the settings menu -->
+            <Operation Class="PatchOperationInsert">
+                <xpath>
+                    Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]
+                </xpath>
+                <order>Prepend</order>
+                <value>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>{defName}_Max</key>
+                        <label>{label} - Remove Max Value</label>
+                        <defaultValue>{defaultState}</defaultValue>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <!-- Pruning Upgrade Settings -->
+    <XmlExtensions.PatchDef Name="Reborn_PruningSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+            <li>defVal</li>
+        </parameters>
+        <apply>
+            <!-- Adding a checkbox to the settings menu -->
+            <Operation Class="PatchOperationInsert">
+                <xpath>
+                    Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Extra:']/following-sibling::li[1]
+                </xpath>
+                <value>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_DPruning</key>
+                                <label>{label} - Connection Strength Gain per Hour</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tooltip>This value determines the base rate at which a pawn's connection strength with a Gauranlen tree increases per hour. It can be adjusted between 0.01 (1%) and 1 (100%). Vanilla Value: 0.01</tooltip>
+                            </li>
+                            <li Class="XmlExtensions.Setting.Numeric">
+                                <key>{defName}_Num</key>
+                                <label>Connection Value:</label>
+                                <defaultValue>{defVal}</defaultValue>
+                                <min>0.01</min>
+                                <max>1</max>
+                            </li>
+                        </settings>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <!--  Post Process Settings  -->
+    <XmlExtensions.PatchDef Name="Reborn_PostProcessSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+        </parameters>
+        <apply>
+            <!-- Adding a checkbox to the settings menu -->
+            <Operation Class="PatchOperationInsert">
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Post Process Curve:']/following-sibling::li[1]
+                </xpath>
+                <order>Prepend</order>
+                <value>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>{defName}_PostProcessCurve</key>
+                        <label>{label} - Make Unlimited</label>
+                        <defaultValue>{defaultState}</defaultValue>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <!-- Skill Need Factors Settings -->
+    <XmlExtensions.PatchDef Name="Reborn_SkillNeedFactorsSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+            <li>baseValue</li>
+            <li>bonusPerLevel</li>
+        </parameters>
+        <apply>
+            <!-- Adding a checkbox to the settings menu -->
+            <Operation Class="PatchOperationInsert">
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Skill Need Factors Type:']/following-sibling::li[1]
+                </xpath>
+                <order>Prepend</order>
+                <value>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_SkillNeedFactors</key>
+                                <label>{label} - Change Calculation Type</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tooltip>When 'Change Calculation Type' is enabled, you can adjust in real-time the Base Value and Bonus Per Level. The Base Value sets the initial skill requirement, while the Bonus Per Level determines how skill requirements increase with each level of skill.</tooltip>
+                            </li>
+                            <li Class="XmlExtensions.Setting.Numeric">
+                                <key>{defName}_BaseValue</key>
+                                <label>Base Value:</label>
+                                <defaultValue>{baseValue}</defaultValue>
+                                <min>0.01</min>
+                                <max>1</max>
+                            </li>
+                            <li Class="XmlExtensions.Setting.Numeric">
+                                <key>{defName}_BonusPerLevel</key>
+                                <label>Bonus Per Level:</label>
+                                <defaultValue>{bonusPerLevel}</defaultValue>
+                                <min>0.01</min>
+                                <max>1</max>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Gap">
+                        <spacing>6</spacing>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+</Defs>

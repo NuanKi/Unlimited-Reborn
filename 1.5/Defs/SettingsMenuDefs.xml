@@ -68,10 +68,11 @@
             <li Class="XmlExtensions.Setting.ResetSettings"/>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
-                <text>Restarting game is required to apply any changes.</text>
+                <text>Restarting game is required to apply some changes.</text>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
         </settings>
+        <postCloseActions/>
     </XmlExtensions.SettingsMenuDef>
 
 </Defs>

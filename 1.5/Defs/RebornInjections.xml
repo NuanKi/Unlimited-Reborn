@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <XmlExtensions.PatchDef Name="Reborn_InjectPruning" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>defVal</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+                <value>
+                    <li Class="XmlExtensions.Action.ApplyOperations">
+                        <apply>
+                            <Operation Class="XmlExtensions.OptionalPatch">
+                                <modId>NuanKi.UnlimitedReborn</modId>
+                                <key>{defName}_DPruning</key>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <caseTrue>
+                                    <Operation Class="XmlExtensions.UseSetting">
+                                        <modId>NuanKi.UnlimitedReborn</modId>
+                                        <key>{defName}_Num</key>
+                                        <defaultValue>{defVal}</defaultValue>
+                                        <apply>
+                                            <Operation Class="XmlExtensions.DefDatabaseOperationReplace">
+                                            <objPath>ThingDef/[defName="Plant_TreeGauranlen"]/comps/[3]/connectionStrengthGainPerHourPruningBase</objPath>
+                                                <value>
+                                                    <val>{{defName}_Num}</val>
+                                                </value>
+                                            </Operation>
+                                        </apply>
+                                    </Operation>
+                                </caseTrue>
+                                <caseFalse>
+                                    <Operation Class="XmlExtensions.DefDatabaseOperationReplace">
+                                        <objPath>ThingDef/[defName="Plant_TreeGauranlen"]/comps/[3]/connectionStrengthGainPerHourPruningBase</objPath>
+                                        <value>
+                                            <val>0.01</val>
+                                        </value>
+                                    </Operation>
+                                </caseFalse>
+                            </Operation>
+                        </apply>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <XmlExtensions.PatchDef Name="Reborn_InjectSkillFactors" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>type</li>
+            <li>skill</li>
+            <li>baseValue</li>
+            <li>bonusPerLevel</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+                <value>
+                    <li Class="XmlExtensions.Action.ApplyOperations">
+                        <apply>
+                            <Operation Class="XmlExtensions.OptionalPatch">
+                                <modId>NuanKi.UnlimitedReborn</modId>
+                                <key>{defName}_SkillNeedFactors</key>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <caseTrue>
+                                    <Operation Class="XmlExtensions.DefDatabaseConditional">
+                                        <objPath>StatDef/[defName="{defName}"]/skillNeedFactors/[@Class="RimWorld.SkillNeed_BaseBonus"]</objPath>
+                                        <caseTrue>
+                                            <Operation Class="XmlExtensions.UseSettings">
+                                                <modId>NuanKi.UnlimitedReborn</modId>
+                                                <keys>
+                                                    <li>{defName}_BaseValue</li>
+                                                    <li>{defName}_BonusPerLevel</li>
+                                                </keys>
+                                                <defaultValues>
+                                                    <li>{baseValue}</li>
+                                                    <li>{bonusPerLevel}</li>
+                                                </defaultValues>
+                                                <apply>
+                                                    <Operation Class="XmlExtensions.DefDatabaseOperationReplace">
+                                                        <objPath>StatDef/[defName="{defName}"]/skillNeedFactors/[@Class="RimWorld.SkillNeed_BaseBonus"]/baseValue</objPath>
+                                                        <value>
+                                                            <val>{{defName}_BaseValue}</val>
+                                                        </value>
+                                                    </Operation>
+                                                    <Operation Class="XmlExtensions.DefDatabaseOperationReplace">
+                                                        <objPath>StatDef/[defName="{defName}"]/skillNeedFactors/[@Class="RimWorld.SkillNeed_BaseBonus"]/bonusPerLevel</objPath>
+                                                        <value>
+                                                            <val>{{defName}_BonusPerLevel}</val>
+                                                        </value>
+                                                    </Operation>
+                                                </apply>
+                                            </Operation>
+                                        </caseTrue>
+                                    </Operation>
+                                </caseTrue>
+                            </Operation>
+                        </apply>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+</Defs>

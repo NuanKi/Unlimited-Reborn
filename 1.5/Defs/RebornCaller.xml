@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- ===========================================================================================
+         |                                                                                         |
+         |                         Un-Limited Reborn Patch Definitions                             |
+         |                                                                                         |
+         | This XML file contains Patch Definitions (PatchDefs) for the "Un-Limited Reborn" mod.   |
+         | These definitions specify how to apply certain modifications and inject settings into   |
+         | the configuration menu.                                                                 |
+         |                                                                                         |
+         | Each PatchDef does the following:                                                       |
+         |  - Defines parameters like defName, type, label, and defaultState                       |
+         |  - Applies specific patches to modify game mechanics (e.g., remove limits, adjust       |
+         |    values, enhance processes)                                                           |
+         |  - Adds the relevant settings to the user interface menu                                |
+         |                                                                                         |
+         | Main PatchDefs included:                                                                |
+         |  - Reborn_RemoveLimit: Removes limits on capacities                                     |
+         |  - Reborn_RemoveMaxValue: Removes restrictions on maximum values                        |
+         |  - Reborn_DoublePruning: Improves pruning processes                                     |
+         |  - Reborn_UnlimitedPostProcess: Adjusts post-processing behavior                        |
+         |  - Reborn_SkillNeedFactors: Modifies skill-based factors                                |
+         |                                                                                         |
+         ===========================================================================================
+    -->
+<!-- Reborn_RemoveLimit -->
+    <XmlExtensions.PatchDef Name="Reborn_RemoveLimit" Abstract="True">
+        <parameters>
+            <li>defName</li>
+            <li>type</li>
+            <li>label</li>
+            <li>defaultState</li>
+            <li>capType</li>
+            <li>tag</li>
+        </parameters>
+        <apply>
+            <!--Apply CapacityMaxRemove Patch-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>CapacityMaxRemove</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{type}</li>
+                    <li>{capType}</li>
+                </arguments>
+            </Operation>
+
+            <!--Inject settings to the menu-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_LimitSettings</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{label}</li>
+                    <li>{tag}</li>
+                </arguments>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+<!-- Reborn_RemoveMaxValue -->
+    <XmlExtensions.PatchDef Name="Reborn_RemoveMaxValue" Abstract="True">
+        <parameters>
+            <li>defName</li>
+            <li>type</li>
+            <li>label</li>
+            <li>defaultState</li>
+            <li>tag</li>
+        </parameters>
+        <apply>
+            <!--Apply MaxValueRemove Patch-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>MaxValueRemove</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{type}</li>
+                </arguments>
+            </Operation>
+
+            <!--Inject settings to the menu-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_MaxValueSettings</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{label}</li>
+                    <li>{tag}</li>
+                </arguments>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+<!-- Reborn_DoublePruning -->
+    <XmlExtensions.PatchDef Name="Reborn_DoublePruning" Abstract="True">
+        <parameters>
+            <li>defName</li>
+            <li>type</li>
+            <li>label</li>
+            <li>defaultState</li>
+            <li>defVal</li>
+        </parameters>
+        <apply>
+            <!--Apply PruningUpgrade Patch-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>PruningUpgrade</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{type}</li>
+                    <li>{defVal}</li>
+                </arguments>
+            </Operation>
+
+            <!--Inject settings to the menu-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_PruningSettings</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{label}</li>
+                    <li>{defVal}</li>
+                </arguments>
+            </Operation>
+
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_InjectPruning</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{defVal}</li>
+                </arguments>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+<!-- Reborn_UnlimitedPostProcess -->
+    <XmlExtensions.PatchDef Name="Reborn_UnlimitedPostProcess" Abstract="True">
+        <parameters>
+            <li>defName</li>
+            <li>type</li>
+            <li>label</li>
+            <li>defaultState</li>
+        </parameters>
+        <apply>
+            <!--Apply PostProcessPatch Patch-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>PostProcessPatch</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{type}</li>
+                </arguments>
+            </Operation>
+
+            <!--Inject settings to the menu-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_PostProcessSettings</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{label}</li>
+                </arguments>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+<!-- Reborn_SkillNeedFactors -->
+    <XmlExtensions.PatchDef Name="Reborn_SkillNeedFactors" Abstract="True">
+        <parameters>
+            <li>defName</li>
+            <li>type</li>
+            <li>label</li>
+            <li>defaultState</li>
+            <li>skill</li>
+            <li>baseValue</li>
+            <li>bonusPerLevel</li>
+        </parameters>
+        <apply>
+            <!--Apply ChangeSkillNeedFactors Patch-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>ChangeSkillNeedFactors</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{type}</li>
+                    <li>{skill}</li>
+                    <li>{baseValue}</li>
+                    <li>{bonusPerLevel}</li>
+                </arguments>
+            </Operation>
+
+            <!--Inject settings to the menu-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_SkillNeedFactorsSettings</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{label}</li>
+                    <li>{baseValue}</li>
+                    <li>{bonusPerLevel}</li>
+                </arguments>
+            </Operation>
+
+
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_InjectSkillFactors</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{type}</li>
+                    <li>{skill}</li>
+                    <li>{baseValue}</li>
+                    <li>{bonusPerLevel}</li>
+                </arguments>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+</Defs>
