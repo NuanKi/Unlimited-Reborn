@@ -24,7 +24,7 @@
                                         <defaultValue>{defVal}</defaultValue>
                                         <apply>
                                             <Operation Class="XmlExtensions.DefDatabaseOperationReplace">
-                                            <objPath>ThingDef/[defName="Plant_TreeGauranlen"]/comps/[3]/connectionStrengthGainPerHourPruningBase</objPath>
+                                                <objPath>ThingDef/[defName="Plant_TreeGauranlen"]/comps/[3]/connectionStrengthGainPerHourPruningBase</objPath>
                                                 <value>
                                                     <val>{{defName}_Num}</val>
                                                 </value>

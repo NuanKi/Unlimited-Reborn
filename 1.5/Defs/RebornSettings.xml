@@ -10,9 +10,7 @@
         </parameters>
         <apply>
             <Operation Class="PatchOperationInsert">
-                <xpath>
-                    Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]
-                </xpath>
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]</xpath>
                 <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Checkbox">
@@ -35,9 +33,7 @@
         </parameters>
         <apply>
             <Operation Class="PatchOperationInsert">
-                <xpath>
-                    Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]
-                </xpath>
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]</xpath>
                 <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Checkbox">
@@ -72,12 +68,17 @@
                                 <defaultValue>{defaultState}</defaultValue>
                                 <tooltip>This value determines the base rate at which a pawn's connection strength with a Gauranlen tree increases per hour. It can be adjusted between 0.01 (1%) and 1 (100%). Vanilla Value: 0.01</tooltip>
                             </li>
-                            <li Class="XmlExtensions.Setting.Numeric">
-                                <key>{defName}_Num</key>
-                                <label>Connection Value:</label>
-                                <defaultValue>{defVal}</defaultValue>
-                                <min>0.01</min>
-                                <max>1</max>
+                            <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                <key>{defName}_DPruning</key>
+                                <caseTrue>
+                                    <li Class="XmlExtensions.Setting.Numeric">
+                                        <key>{defName}_Num</key>
+                                        <label>Connection Value:</label>
+                                        <defaultValue>{defVal}</defaultValue>
+                                        <min>0.01</min>
+                                        <max>1</max>
+                                    </li>
+                                </caseTrue>
                             </li>
                         </settings>
                     </li>
@@ -95,8 +96,7 @@
         </parameters>
         <apply>
             <Operation Class="PatchOperationInsert">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Post Process Curve:']/following-sibling::li[1]
-                </xpath>
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Post Process Curve:']/following-sibling::li[1]</xpath>
                 <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Checkbox">
@@ -120,8 +120,7 @@
         </parameters>
         <apply>
             <Operation Class="PatchOperationInsert">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Skill Need Factors Type:']/following-sibling::li[1]
-                </xpath>
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Skill Need Factors Type:']/following-sibling::li[1]</xpath>
                 <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Section">
@@ -132,19 +131,24 @@
                                 <defaultValue>{defaultState}</defaultValue>
                                 <tooltip>When 'Change Calculation Type' is enabled, you can adjust in real-time the Base Value and Bonus Per Level. The Base Value sets the initial skill value, while the Bonus Per Level determines how skill requirements increase with each level of skill.</tooltip>
                             </li>
-                            <li Class="XmlExtensions.Setting.Numeric">
-                                <key>{defName}_BaseValue</key>
-                                <label>Base Value:</label>
-                                <defaultValue>{baseValue}</defaultValue>
-                                <min>0.01</min>
-                                <max>1</max>
-                            </li>
-                            <li Class="XmlExtensions.Setting.Numeric">
-                                <key>{defName}_BonusPerLevel</key>
-                                <label>Bonus Per Level:</label>
-                                <defaultValue>{bonusPerLevel}</defaultValue>
-                                <min>0.01</min>
-                                <max>1</max>
+                            <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                <key>{defName}_SkillNeedFactors</key>
+                                <caseTrue>
+                                    <li Class="XmlExtensions.Setting.Numeric">
+                                        <key>{defName}_BaseValue</key>
+                                        <label>Base Value:</label>
+                                        <defaultValue>{baseValue}</defaultValue>
+                                        <min>0.01</min>
+                                        <max>1</max>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Numeric">
+                                        <key>{defName}_BonusPerLevel</key>
+                                        <label>Bonus Per Level:</label>
+                                        <defaultValue>{bonusPerLevel}</defaultValue>
+                                        <min>0.01</min>
+                                        <max>1</max>
+                                    </li>
+                                </caseTrue>
                             </li>
                         </settings>
                     </li>

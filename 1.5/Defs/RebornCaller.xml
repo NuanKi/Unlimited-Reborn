@@ -23,7 +23,7 @@
          |                                                                                         |
          ===========================================================================================
     -->
-<!-- Reborn_RemoveLimit -->
+    <!-- Reborn_RemoveLimit -->
     <XmlExtensions.PatchDef Name="Reborn_RemoveLimit" Abstract="True">
         <parameters>
             <li>defName</li>
@@ -58,7 +58,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
-<!-- Reborn_RemoveMaxValue -->
+    <!-- Reborn_RemoveMaxValue -->
     <XmlExtensions.PatchDef Name="Reborn_RemoveMaxValue" Abstract="True">
         <parameters>
             <li>defName</li>
@@ -91,7 +91,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
-<!-- Reborn_DoublePruning -->
+    <!-- Reborn_DoublePruning -->
     <XmlExtensions.PatchDef Name="Reborn_DoublePruning" Abstract="True">
         <parameters>
             <li>defName</li>
@@ -135,7 +135,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
-<!-- Reborn_UnlimitedPostProcess -->
+    <!-- Reborn_UnlimitedPostProcess -->
     <XmlExtensions.PatchDef Name="Reborn_UnlimitedPostProcess" Abstract="True">
         <parameters>
             <li>defName</li>
@@ -166,7 +166,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
-<!-- Reborn_SkillNeedFactors -->
+    <!-- Reborn_SkillNeedFactors -->
     <XmlExtensions.PatchDef Name="Reborn_SkillNeedFactors" Abstract="True">
         <parameters>
             <li>defName</li>

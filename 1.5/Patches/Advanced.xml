@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-<!--  Unlimited postProcessCurve  -->
-<!--  Stats Pawns Combat  -->
+    <!--  Unlimited postProcessCurve  -->
+    <!--  Stats Pawns Combat  -->
     <!--  MeleeHitChance  -->
     <Operation Class="XmlExtensions.ApplyPatch">
         <patchName>Reborn_UnlimitedPostProcess</patchName>
@@ -34,7 +34,7 @@
             <li>false</li>
         </arguments>
     </Operation>
-<!--  Stats Pawn WorkGeneral -->
+    <!--  Stats Pawn WorkGeneral -->
     <!--  HuntingStealth  -->
     <Operation Class="XmlExtensions.ApplyPatch">
         <patchName>Reborn_UnlimitedPostProcess</patchName>
@@ -46,7 +46,7 @@
         </arguments>
     </Operation>
 
-<!--  Stats Pawn WorkMedical  -->
+    <!--  Stats Pawn WorkMedical  -->
     <!--  MedicalTendQuality  -->
     <Operation Class="XmlExtensions.ApplyPatch">
         <patchName>Reborn_UnlimitedPostProcess</patchName>
@@ -58,7 +58,7 @@
         </arguments>
     </Operation>
 
-<!--  Stats Pawn WorkRecipes  -->
+    <!--  Stats Pawn WorkRecipes  -->
     <!--  CookSpeed  -->
     <Operation Class="XmlExtensions.ApplyPatch">
         <patchName>Reborn_UnlimitedPostProcess</patchName>
@@ -70,7 +70,7 @@
         </arguments>
     </Operation>
 
-<!-- ChangeSkillNeedFactors -->
+    <!-- ChangeSkillNeedFactors -->
     <!--  MiningYield  -->
     <Operation Class="XmlExtensions.ApplyPatch">
         <patchName>Reborn_SkillNeedFactors</patchName>
