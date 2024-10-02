@@ -123,6 +123,7 @@
                 </arguments>
             </Operation>
 
+            <!--Inject Real Time Actions-->
             <Operation Class="XmlExtensions.ApplyPatch">
                 <patchName>Reborn_InjectPruning</patchName>
                 <arguments>
@@ -202,7 +203,7 @@
                 </arguments>
             </Operation>
 
-
+            <!--Inject Real Time Actions-->
             <Operation Class="XmlExtensions.ApplyPatch">
                 <patchName>Reborn_InjectSkillFactors</patchName>
                 <arguments>

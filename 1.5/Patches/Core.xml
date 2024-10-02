@@ -2,7 +2,6 @@
 <Patch>
     <!-- Stats Apparel -->
     <!-- ArmorRatingBase MaxValue -->
-
     <Operation Class="XmlExtensions.FindMod">
         <mods>
             <li>Combat Extended</li>

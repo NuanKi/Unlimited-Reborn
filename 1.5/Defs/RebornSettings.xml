@@ -9,7 +9,6 @@
             <li>tag</li>
         </parameters>
         <apply>
-            <!-- Adding a checkbox to the settings menu -->
             <Operation Class="PatchOperationInsert">
                 <xpath>
                     Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]
@@ -35,7 +34,6 @@
             <li>tag</li>
         </parameters>
         <apply>
-            <!-- Adding a checkbox to the settings menu -->
             <Operation Class="PatchOperationInsert">
                 <xpath>
                     Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]
@@ -61,7 +59,6 @@
             <li>defVal</li>
         </parameters>
         <apply>
-            <!-- Adding a checkbox to the settings menu -->
             <Operation Class="PatchOperationInsert">
                 <xpath>
                     Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Extra:']/following-sibling::li[1]
@@ -97,7 +94,6 @@
             <li>label</li>
         </parameters>
         <apply>
-            <!-- Adding a checkbox to the settings menu -->
             <Operation Class="PatchOperationInsert">
                 <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Post Process Curve:']/following-sibling::li[1]
                 </xpath>
@@ -123,7 +119,6 @@
             <li>bonusPerLevel</li>
         </parameters>
         <apply>
-            <!-- Adding a checkbox to the settings menu -->
             <Operation Class="PatchOperationInsert">
                 <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Skill Need Factors Type:']/following-sibling::li[1]
                 </xpath>
@@ -135,7 +130,7 @@
                                 <key>{defName}_SkillNeedFactors</key>
                                 <label>{label} - Change Calculation Type</label>
                                 <defaultValue>{defaultState}</defaultValue>
-                                <tooltip>When 'Change Calculation Type' is enabled, you can adjust in real-time the Base Value and Bonus Per Level. The Base Value sets the initial skill requirement, while the Bonus Per Level determines how skill requirements increase with each level of skill.</tooltip>
+                                <tooltip>When 'Change Calculation Type' is enabled, you can adjust in real-time the Base Value and Bonus Per Level. The Base Value sets the initial skill value, while the Bonus Per Level determines how skill requirements increase with each level of skill.</tooltip>
                             </li>
                             <li Class="XmlExtensions.Setting.Numeric">
                                 <key>{defName}_BaseValue</key>

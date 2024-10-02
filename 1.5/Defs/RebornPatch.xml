@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+    <!-- Removing the max value from the capacityFactors -->
     <XmlExtensions.PatchDef Name="CapacityMaxRemove" Abstract="True">
         <parameters>
             <li>defaultState</li>
@@ -9,7 +9,6 @@
             <li>capType</li>
         </parameters>
         <apply>
-            <!-- Removing the max value from the capacityFactors -->
             <Operation Class="XmlExtensions.OptionalPatch">
                 <modId>NuanKi.UnlimitedReborn</modId>
                 <key>{defName}_Caps</key>
@@ -30,7 +29,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
-
+    <!-- Removing the maxValue from the StatDef -->
     <XmlExtensions.PatchDef Name="MaxValueRemove" Abstract="True">
         <parameters>
             <li>defaultState</li>
@@ -38,7 +37,6 @@
             <li>type</li>
         </parameters>
         <apply>
-            <!-- Removing the maxValue from the StatDef -->
             <Operation Class="XmlExtensions.OptionalPatch">
                 <modId>NuanKi.UnlimitedReborn</modId>
                 <key>{defName}_Max</key>
@@ -52,6 +50,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
+    <!-- Adjusting the pruning upgrade value -->
     <XmlExtensions.PatchDef Name="PruningUpgrade" Abstract="True">
         <parameters>
             <li>defaultState</li>
@@ -84,6 +83,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
+    <!-- Adding a post-process curve point -->
     <XmlExtensions.PatchDef Name="PostProcessPatch" Abstract="True">
         <parameters>
             <li>defaultState</li>
@@ -107,7 +107,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
-    <!--  Change skillNeedFactors type  -->
+    <!-- Changing the skillNeedFactors type -->
     <XmlExtensions.PatchDef Name="ChangeSkillNeedFactors" Abstract="True">
         <parameters>
             <li>defaultState</li>

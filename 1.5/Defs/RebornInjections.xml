@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!-- Injecting real-time pruning actions -->
     <XmlExtensions.PatchDef Name="Reborn_InjectPruning" Abstract="True">
         <parameters>
             <li>defaultState</li>
@@ -47,6 +48,7 @@
         </apply>
     </XmlExtensions.PatchDef>
 
+    <!-- Injecting real-time skill factors actions -->
     <XmlExtensions.PatchDef Name="Reborn_InjectSkillFactors" Abstract="True">
         <parameters>
             <li>defaultState</li>
