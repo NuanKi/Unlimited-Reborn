@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <!-- Check if the EndlessGrowth mod is loaded and apply patch for MeleeDodgeChance -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>EndlessGrowth</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <!-- Check if the specific point exists in MeleeDodgeChance -->
+            <xpath>Defs/StatDef[defName="MeleeDodgeChance"]/postProcessCurve/points/li[text()="(100000, 100000)"]</xpath>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>Defs/StatDef[defName="MeleeDodgeChance"]/postProcessCurve/points</xpath>
+                <value>
+                    <li>(100, 1.0)</li>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!-- Check if the EndlessGrowth mod is loaded and apply patch for MedicalTendQuality -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>EndlessGrowth</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <!-- Check if the specific point exists in MedicalTendQuality -->
+            <xpath>Defs/StatDef[defName="MedicalTendQuality"]/postProcessCurve/points/li[text()="(100000, 100000)"]</xpath>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>Defs/StatDef[defName="MedicalTendQuality"]/postProcessCurve/points</xpath>
+                <value>
+                    <li>(6.0, 2.5)</li>
+                    <li>(8.0, 3.0)</li>
+                    <li>(10.0, 3.5)</li>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!-- Check if the EndlessGrowth mod is loaded and apply patch for PlantHarvestYield -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>EndlessGrowth</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <!-- Check if the specified xpath exists for PlantHarvestYield -->
+            <xpath>Defs/StatDef[defName='PlantHarvestYield']/skillNeedFactors/li/valuesPerLevel</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/StatDef[defName='PlantHarvestYield']/skillNeedFactors/li/valuesPerLevel</xpath>
+                <value>
+                    <li>1.14</li>
+                    <li>1.15</li>
+                    <li>1.16</li>
+                    <li>1.17</li>
+                    <li>1.18</li>
+                    <li>1.19</li>
+                    <li>1.20</li>
+                    <li>1.21</li>
+                    <li>1.22</li>
+                    <li>1.23</li>
+                    <li>1.24</li>
+                    <li>1.25</li>
+                    <li>1.26</li>
+                    <li>1.27</li>
+                    <li>1.28</li>
+                    <li>1.29</li>
+                    <li>1.30</li>
+                    <li>1.31</li>
+                    <li>1.32</li>
+                    <li>1.33</li>
+                    <li>1.34</li>
+                    <li>1.35</li>
+                    <li>1.36</li>
+                    <li>1.37</li>
+                    <li>1.38</li>
+                    <li>1.39</li>
+                    <li>1.40</li>
+                    <li>1.41</li>
+                    <li>1.42</li>
+                    <li>1.43</li>
+                    <li>1.44</li>
+                    <li>1.45</li>
+                    <li>1.46</li>
+                    <li>1.47</li>
+                    <li>1.48</li>
+                    <li>1.49</li>
+                    <li>1.50</li>
+                    <li>1.51</li>
+                    <li>1.52</li>
+                    <li>1.53</li>
+                    <li>1.54</li>
+                    <li>1.55</li>
+                    <li>1.56</li>
+                    <li>1.57</li>
+                    <li>1.58</li>
+                    <li>1.59</li>
+                    <li>1.60</li>
+                    <li>1.61</li>
+                    <li>1.62</li>
+                    <li>1.63</li>
+                    <li>1.64</li>
+                    <li>1.65</li>
+                    <li>1.66</li>
+                    <li>1.67</li>
+                    <li>1.68</li>
+                    <li>1.69</li>
+                    <li>1.70</li>
+                    <li>1.71</li>
+                    <li>1.72</li>
+                    <li>1.73</li>
+                    <li>1.74</li>
+                    <li>1.75</li>
+                    <li>1.76</li>
+                    <li>1.77</li>
+                    <li>1.78</li>
+                    <li>1.79</li>
+                    <li>1.80</li>
+                    <li>1.81</li>
+                    <li>1.82</li>
+                    <li>1.83</li>
+                    <li>1.84</li>
+                    <li>1.85</li>
+                    <li>1.86</li>
+                    <li>1.87</li>
+                    <li>1.88</li>
+                    <li>1.89</li>
+                    <li>1.90</li>
+                    <li>1.91</li>
+                    <li>1.92</li>
+                    <li>1.93</li>
+                </value>
+            </match>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>EndlessGrowth</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName='CookSpeed']/postProcessCurve/points</xpath>
+            <value>
+                <li>(100, 6.4)</li>
+            </value>
+        </match>
+    </Operation>
+
+    <!-- Check if the EndlessGrowth mod is loaded and apply patch for MedicalSurgerySuccessChance -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>EndlessGrowth</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <!-- Check if the specified xpath exists for MedicalSurgerySuccessChance -->
+            <xpath>Defs/StatDef[defName='MedicalSurgerySuccessChance']/skillNeedFactors/li/valuesPerLevel</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/StatDef[defName='MedicalSurgerySuccessChance']/skillNeedFactors/li/valuesPerLevel</xpath>
+                <value>
+                    <li>1.12</li>
+                    <li>1.14</li>
+                    <li>1.16</li>
+                    <li>1.18</li>
+                    <li>1.20</li>
+                    <li>1.22</li>
+                    <li>1.24</li>
+                    <li>1.26</li>
+                    <li>1.28</li>
+                    <li>1.30</li>
+                    <li>1.32</li>
+                    <li>1.34</li>
+                    <li>1.36</li>
+                    <li>1.38</li>
+                    <li>1.40</li>
+                    <li>1.42</li>
+                    <li>1.44</li>
+                    <li>1.46</li>
+                    <li>1.48</li>
+                    <li>1.50</li>
+                    <li>1.52</li>
+                    <li>1.54</li>
+                    <li>1.56</li>
+                    <li>1.58</li>
+                    <li>1.60</li>
+                    <li>1.62</li>
+                    <li>1.64</li>
+                    <li>1.66</li>
+                    <li>1.68</li>
+                    <li>1.70</li>
+                    <li>1.72</li>
+                    <li>1.74</li>
+                    <li>1.76</li>
+                    <li>1.78</li>
+                    <li>1.80</li>
+                    <li>1.82</li>
+                    <li>1.84</li>
+                    <li>1.86</li>
+                    <li>1.88</li>
+                    <li>1.90</li>
+                    <li>1.92</li>
+                    <li>1.94</li>
+                    <li>1.96</li>
+                    <li>1.98</li>
+                    <li>2.00</li>
+                    <li>2.02</li>
+                    <li>2.04</li>
+                    <li>2.06</li>
+                    <li>2.08</li>
+                    <li>2.10</li>
+                    <li>2.12</li>
+                    <li>2.14</li>
+                    <li>2.16</li>
+                    <li>2.18</li>
+                    <li>2.20</li>
+                    <li>2.22</li>
+                    <li>2.24</li>
+                    <li>2.26</li>
+                    <li>2.28</li>
+                    <li>2.30</li>
+                    <li>2.32</li>
+                    <li>2.34</li>
+                    <li>2.36</li>
+                    <li>2.38</li>
+                    <li>2.40</li>
+                    <li>2.42</li>
+                    <li>2.44</li>
+                    <li>2.46</li>
+                    <li>2.48</li>
+                    <li>2.50</li>
+                    <li>2.52</li>
+                    <li>2.54</li>
+                    <li>2.56</li>
+                    <li>2.58</li>
+                    <li>2.60</li>
+                    <li>2.62</li>
+                    <li>2.64</li>
+                    <li>2.66</li>
+                    <li>2.68</li>
+                    <li>2.70</li>
+                </value>
+            </match>
+        </match>
+    </Operation>
+
+    <!-- Check if the EndlessGrowth mod is loaded and apply patch for AnimalGatherYield -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>EndlessGrowth</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <!-- Check if the specified xpath exists for AnimalGatherYield -->
+            <xpath>Defs/StatDef[defName='AnimalGatherYield']/skillNeedFactors/li/valuesPerLevel</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/StatDef[defName='AnimalGatherYield']/skillNeedFactors/li/valuesPerLevel</xpath>
+                <value>
+                    <li>1.14</li>
+                    <li>1.15</li>
+                    <li>1.16</li>
+                    <li>1.17</li>
+                    <li>1.18</li>
+                    <li>1.19</li>
+                    <li>1.20</li>
+                    <li>1.21</li>
+                    <li>1.22</li>
+                    <li>1.23</li>
+                    <li>1.24</li>
+                    <li>1.25</li>
+                    <li>1.26</li>
+                    <li>1.27</li>
+                    <li>1.28</li>
+                    <li>1.29</li>
+                    <li>1.30</li>
+                    <li>1.31</li>
+                    <li>1.32</li>
+                    <li>1.33</li>
+                    <li>1.34</li>
+                    <li>1.35</li>
+                    <li>1.36</li>
+                    <li>1.37</li>
+                    <li>1.38</li>
+                    <li>1.39</li>
+                    <li>1.40</li>
+                    <li>1.41</li>
+                    <li>1.42</li>
+                    <li>1.43</li>
+                    <li>1.44</li>
+                    <li>1.45</li>
+                    <li>1.46</li>
+                    <li>1.47</li>
+                    <li>1.48</li>
+                    <li>1.49</li>
+                    <li>1.50</li>
+                    <li>1.51</li>
+                    <li>1.52</li>
+                    <li>1.53</li>
+                    <li>1.54</li>
+                    <li>1.55</li>
+                    <li>1.56</li>
+                    <li>1.57</li>
+                    <li>1.58</li>
+                    <li>1.59</li>
+                    <li>1.60</li>
+                    <li>1.61</li>
+                    <li>1.62</li>
+                    <li>1.63</li>
+                    <li>1.64</li>
+                    <li>1.65</li>
+                    <li>1.66</li>
+                    <li>1.67</li>
+                    <li>1.68</li>
+                    <li>1.69</li>
+                    <li>1.70</li>
+                    <li>1.71</li>
+                    <li>1.72</li>
+                    <li>1.73</li>
+                    <li>1.74</li>
+                    <li>1.75</li>
+                    <li>1.76</li>
+                    <li>1.77</li>
+                    <li>1.78</li>
+                    <li>1.79</li>
+                    <li>1.80</li>
+                    <li>1.81</li>
+                    <li>1.82</li>
+                    <li>1.83</li>
+                    <li>1.84</li>
+                    <li>1.85</li>
+                    <li>1.86</li>
+                    <li>1.87</li>
+                    <li>1.88</li>
+                    <li>1.89</li>
+                    <li>1.90</li>
+                    <li>1.91</li>
+                    <li>1.92</li>
+                    <li>1.93</li>
+                </value>
+            </match>
+        </match>
+    </Operation>
+
+    <!-- Check if the EndlessGrowth mod is loaded and apply patch for MiningYield -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>EndlessGrowth</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <!-- Check if the specified xpath exists for MiningYield -->
+            <xpath>Defs/StatDef[defName='MiningYield']/skillNeedFactors/li/valuesPerLevel</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/StatDef[defName='MiningYield']/skillNeedFactors/li/valuesPerLevel</xpath>
+                <value>
+                    <li>1.14</li>
+                    <li>1.15</li>
+                    <li>1.16</li>
+                    <li>1.17</li>
+                    <li>1.18</li>
+                    <li>1.19</li>
+                    <li>1.20</li>
+                    <li>1.21</li>
+                    <li>1.22</li>
+                    <li>1.23</li>
+                    <li>1.24</li>
+                    <li>1.25</li>
+                    <li>1.26</li>
+                    <li>1.27</li>
+                    <li>1.28</li>
+                    <li>1.29</li>
+                    <li>1.30</li>
+                    <li>1.31</li>
+                    <li>1.32</li>
+                    <li>1.33</li>
+                    <li>1.34</li>
+                    <li>1.35</li>
+                    <li>1.36</li>
+                    <li>1.37</li>
+                    <li>1.38</li>
+                    <li>1.39</li>
+                    <li>1.40</li>
+                    <li>1.41</li>
+                    <li>1.42</li>
+                    <li>1.43</li>
+                    <li>1.44</li>
+                    <li>1.45</li>
+                    <li>1.46</li>
+                    <li>1.47</li>
+                    <li>1.48</li>
+                    <li>1.49</li>
+                    <li>1.50</li>
+                    <li>1.51</li>
+                    <li>1.52</li>
+                    <li>1.53</li>
+                    <li>1.54</li>
+                    <li>1.55</li>
+                    <li>1.56</li>
+                    <li>1.57</li>
+                    <li>1.58</li>
+                    <li>1.59</li>
+                    <li>1.60</li>
+                    <li>1.61</li>
+                    <li>1.62</li>
+                    <li>1.63</li>
+                    <li>1.64</li>
+                    <li>1.65</li>
+                    <li>1.66</li>
+                    <li>1.67</li>
+                    <li>1.68</li>
+                    <li>1.69</li>
+                    <li>1.70</li>
+                    <li>1.71</li>
+                    <li>1.72</li>
+                    <li>1.73</li>
+                    <li>1.74</li>
+                    <li>1.75</li>
+                    <li>1.76</li>
+                    <li>1.77</li>
+                    <li>1.78</li>
+                    <li>1.79</li>
+                    <li>1.80</li>
+                    <li>1.81</li>
+                    <li>1.82</li>
+                    <li>1.83</li>
+                    <li>1.84</li>
+                    <li>1.85</li>
+                    <li>1.86</li>
+                    <li>1.87</li>
+                    <li>1.88</li>
+                    <li>1.89</li>
+                    <li>1.90</li>
+                    <li>1.91</li>
+                    <li>1.92</li>
+                    <li>1.93</li>
+                </value>
+            </match>
+        </match>
+    </Operation>
+
+    <!-- Check if the EndlessGrowth mod is loaded and apply patch for ConstructSuccessChance -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>EndlessGrowth</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <!-- Check if the specified xpath exists for ConstructSuccessChance -->
+            <xpath>Defs/StatDef[defName='ConstructSuccessChance']/skillNeedFactors/li/valuesPerLevel</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/StatDef[defName='ConstructSuccessChance']/skillNeedFactors/li/valuesPerLevel</xpath>
+                <value>
+                    <li>1.14</li>
+                    <li>1.15</li>
+                    <li>1.16</li>
+                    <li>1.17</li>
+                    <li>1.18</li>
+                    <li>1.19</li>
+                    <li>1.20</li>
+                    <li>1.21</li>
+                    <li>1.22</li>
+                    <li>1.23</li>
+                    <li>1.24</li>
+                    <li>1.25</li>
+                    <li>1.26</li>
+                    <li>1.27</li>
+                    <li>1.28</li>
+                    <li>1.29</li>
+                    <li>1.30</li>
+                    <li>1.31</li>
+                    <li>1.32</li>
+                    <li>1.33</li>
+                    <li>1.34</li>
+                    <li>1.35</li>
+                    <li>1.36</li>
+                    <li>1.37</li>
+                    <li>1.38</li>
+                    <li>1.39</li>
+                    <li>1.40</li>
+                    <li>1.41</li>
+                    <li>1.42</li>
+                    <li>1.43</li>
+                    <li>1.44</li>
+                    <li>1.45</li>
+                    <li>1.46</li>
+                    <li>1.47</li>
+                    <li>1.48</li>
+                    <li>1.49</li>
+                    <li>1.50</li>
+                    <li>1.51</li>
+                    <li>1.52</li>
+                    <li>1.53</li>
+                    <li>1.54</li>
+                    <li>1.55</li>
+                    <li>1.56</li>
+                    <li>1.57</li>
+                    <li>1.58</li>
+                    <li>1.59</li>
+                    <li>1.60</li>
+                    <li>1.61</li>
+                    <li>1.62</li>
+                    <li>1.63</li>
+                    <li>1.64</li>
+                    <li>1.65</li>
+                    <li>1.66</li>
+                    <li>1.67</li>
+                    <li>1.68</li>
+                    <li>1.69</li>
+                    <li>1.70</li>
+                    <li>1.71</li>
+                    <li>1.72</li>
+                    <li>1.73</li>
+                    <li>1.74</li>
+                    <li>1.75</li>
+                    <li>1.76</li>
+                    <li>1.77</li>
+                    <li>1.78</li>
+                    <li>1.79</li>
+                    <li>1.80</li>
+                    <li>1.81</li>
+                    <li>1.82</li>
+                    <li>1.83</li>
+                    <li>1.84</li>
+                    <li>1.85</li>
+                    <li>1.86</li>
+                    <li>1.87</li>
+                    <li>1.88</li>
+                    <li>1.89</li>
+                    <li>1.90</li>
+                    <li>1.91</li>
+                    <li>1.92</li>
+                    <li>1.93</li>
+                </value>
+            </match>
+        </match>
+    </Operation>
+</Patch>

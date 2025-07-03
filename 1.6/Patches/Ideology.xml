@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Ideology</li>
+        </mods>
+        <caseTrue>
+            <!-- Stats Pawns Ideo -->
+            <!-- ConversionPower CapacityFactors -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>ConversionPower</li>
+                    <li>defName</li>
+                    <li>Conversion power</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Ideology</li>
+                </arguments>
+            </Operation>
+
+            <!-- Stats Pawns WorkGeneral -->
+            <!-- SuppressionPower MaxValue -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveMaxValue</patchName>
+                <arguments>
+                    <li>SuppressionPower</li>
+                    <li>defName</li>
+                    <li>Suppression power</li>
+                    <li>true</li>
+                    <li>Ideology</li>
+                </arguments>
+            </Operation>
+
+            <!-- HackingSpeed CapacityFactors -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>HackingSpeed</li>
+                    <li>defName</li>
+                    <li>Hacking speed</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Ideology</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+</Patch>
