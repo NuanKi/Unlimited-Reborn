@@ -17,6 +17,7 @@
                         <key>{defName}_Caps</key>
                         <label>{label} - Remove Limit</label>
                         <defaultValue>{defaultState}</defaultValue>
+                        <tKey>TRUR_{defName}_Caps</tKey>
                     </li>
                 </value>
             </Operation>
@@ -40,6 +41,7 @@
                         <key>{defName}_Max</key>
                         <label>{label} - Remove Max Value</label>
                         <defaultValue>{defaultState}</defaultValue>
+                        <tKey>TRUR_{defName}_Max</tKey>
                     </li>
                 </value>
             </Operation>
@@ -67,6 +69,8 @@
                                 <label>{label} - Connection Strength Gain per Hour</label>
                                 <defaultValue>{defaultState}</defaultValue>
                                 <tooltip>This value determines the base rate at which a pawn's connection strength with a Gauranlen tree increases per hour. It can be adjusted between 0.01 (1%) and 1 (100%). Vanilla Value: 0.01</tooltip>
+                                <tKey>TRUR_{defName}_DPruning</tKey>
+                                <tKeyTip>TRUR_{defName}_DPruning_Tooltip</tKeyTip>
                             </li>
                             <li Class="XmlExtensions.Setting.ToggleableSettings">
                                 <key>{defName}_DPruning</key>
@@ -75,8 +79,10 @@
                                         <key>{defName}_Num</key>
                                         <label>Connection Value:</label>
                                         <defaultValue>{defVal}</defaultValue>
+                                        <decimals>3</decimals>
                                         <min>0.01</min>
                                         <max>100</max>
+                                        <tKey>TRUR_{defName}_Num</tKey>
                                     </li>
                                 </caseTrue>
                             </li>
@@ -103,6 +109,7 @@
                         <key>{defName}_PostProcessCurve</key>
                         <label>{label} - Make Unlimited</label>
                         <defaultValue>{defaultState}</defaultValue>
+                        <tKey>TRUR_{defName}_PostProcessCurve</tKey>
                     </li>
                 </value>
             </Operation>
@@ -130,6 +137,8 @@
                                 <label>{label} - Change Calculation Type</label>
                                 <defaultValue>{defaultState}</defaultValue>
                                 <tooltip>When 'Change Calculation Type' is enabled, you can adjust in real-time the Base Value and Bonus Per Level. The Base Value sets the initial skill value, while the Bonus Per Level determines how skill requirements increase with each level of skill.</tooltip>
+                                <tKey>TRUR_{defName}_SkillNeedFactors</tKey>
+                                <tKeyTip>TRUR_{defName}_SkillNeedFactors_Tooltip</tKeyTip>
                             </li>
                             <li Class="XmlExtensions.Setting.ToggleableSettings">
                                 <key>{defName}_SkillNeedFactors</key>
@@ -138,15 +147,19 @@
                                         <key>{defName}_BaseValue</key>
                                         <label>Base Value:</label>
                                         <defaultValue>{baseValue}</defaultValue>
+                                        <decimals>3</decimals>
                                         <min>0.01</min>
-                                         <max>100</max>
+                                        <max>100</max>
+                                        <tKey>TRUR_{defName}_BaseValue</tKey>
                                     </li>
                                     <li Class="XmlExtensions.Setting.Numeric">
                                         <key>{defName}_BonusPerLevel</key>
                                         <label>Bonus Per Level:</label>
                                         <defaultValue>{bonusPerLevel}</defaultValue>
+                                        <decimals>3</decimals>
                                         <min>0.01</min>
                                         <max>100</max>
+                                        <tKey>TRUR_{defName}_BonusPerLevel</tKey>
                                     </li>
                                 </caseTrue>
                             </li>

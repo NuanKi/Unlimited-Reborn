@@ -4,71 +4,87 @@
         <defName>UnlimitedReborn</defName>
         <modId>NuanKi.UnlimitedReborn</modId>
         <label>Un-Limited Reborn</label>
+        <tKey>TRUR_SettingsMenu</tKey>
         <settings>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Un-Limited Reborn</text>
                 <font>Medium</font>
                 <anchor>Middle</anchor>
+                <tKey>TRUR_SettingsMenu</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Apparel:</text>
+                <tKey>TRUR_Apparel</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Combat:</text>
+                <tKey>TRUR_Combat</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>General:</text>
+                <tKey>TRUR_General</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Social:</text>
+                <tKey>TRUR_Social</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Work General:</text>
+                <tKey>TRUR_WorkGeneral</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Work Medical:</text>
+                <tKey>TRUR_WorkMedical</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Work Recipes:</text>
+                <tKey>TRUR_WorkRecipes</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Ideology:</text>
+                <tKey>TRUR_Ideology</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Extra:</text>
+                <tKey>TRUR_Extra</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Advanced</text>
                 <font>Medium</font>
                 <anchor>Middle</anchor>
+                <tKey>TRUR_Advanced</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Post Process Curve:</text>
+                <tKey>TRUR_PostProcessCurve</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Skill Need Factors Type:</text>
+                <tKey>TRUR_SkillNeedFactorsType</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>For more info see the Wiki</text>
+                <tKey>TRUR_Wiki</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.ResetSettings"/>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
                 <text>Restarting game is required to apply some changes.</text>
+                <tKey>TRUR_RestartRequired</tKey>
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
         </settings>
