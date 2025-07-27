@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="XmlExtensions.MergeDocument">
+        <docName>RebornMenu</docName>
+    </Operation>
+
+    <Operation Class="XmlExtensions.MergeDocument">
+        <docName>StatDefs</docName>
+    </Operation>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Ideology</li>
+        </mods>
+        <caseTrue>
+            <Operation Class="XmlExtensions.MergeDocument">
+                <docName>GauranlenTree</docName>
+            </Operation>
+        </caseTrue>
+    </Operation>
+</Patch>

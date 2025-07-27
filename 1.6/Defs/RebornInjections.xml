@@ -8,8 +8,9 @@
             <li>defVal</li>
         </parameters>
         <apply>
-            <Operation Class="PatchOperationAdd">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+            <Operation Class="XmlExtensions.PatchOperationAdd">
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <value>
                     <li Class="XmlExtensions.Action.ApplyOperations">
                         <apply>
@@ -59,8 +60,9 @@
             <li>bonusPerLevel</li>
         </parameters>
         <apply>
-            <Operation Class="PatchOperationAdd">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+            <Operation Class="XmlExtensions.PatchOperationAdd">
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <value>
                     <li Class="XmlExtensions.Action.ApplyOperations">
                         <apply>
