@@ -15,8 +15,8 @@
                 <defaultValue>{defaultState}</defaultValue>
                 <caseTrue>
                     <Operation Class="XmlExtensions.PatchOperationSafeRemove">
-                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/{capType}/li/max</xpath>
-                        <xmlDoc>StatDefs</xmlDoc>
+                        <xpath>Defs/StatDef[{type} = "{defName}"]/{capType}/li/max</xpath>
+
                     </Operation>
                 </caseTrue>
             </Operation>
@@ -37,8 +37,8 @@
                 <defaultValue>{defaultState}</defaultValue>
                 <caseTrue>
                     <Operation Class="XmlExtensions.PatchOperationSafeRemove">
-                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/maxValue</xpath>
-                        <xmlDoc>StatDefs</xmlDoc>
+                        <xpath>Defs/StatDef[{type} = "{defName}"]/maxValue</xpath>
+
                     </Operation>
                 </caseTrue>
             </Operation>
@@ -93,8 +93,8 @@
                 <defaultValue>{defaultState}</defaultValue>
                 <caseTrue>
                     <Operation Class="XmlExtensions.PatchOperationAdd">
-                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/postProcessCurve/points</xpath>
-                        <xmlDoc>StatDefs</xmlDoc>
+                        <xpath>Defs/StatDef[{type} = "{defName}"]/postProcessCurve/points</xpath>
+
                         <value>
                             <li>(100000, 100000)</li>
                         </value>
@@ -132,8 +132,8 @@
                         </defaultValues>
                         <apply>
                             <Operation Class="XmlExtensions.PatchOperationReplace">
-                                <xpath>StatDefs/StatDef[{type} = "{defName}"]/skillNeedFactors</xpath>
-                                <xmlDoc>StatDefs</xmlDoc>
+                                <xpath>Defs/StatDef[{type} = "{defName}"]/skillNeedFactors</xpath>
+
                                 <value>
                                     <skillNeedFactors>
                                         <li Class="SkillNeed_BaseBonus">
