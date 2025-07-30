@@ -10,8 +10,8 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]</xpath>
-
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Checkbox">
@@ -35,8 +35,8 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]</xpath>
-
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Checkbox">
@@ -60,8 +60,8 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Extra:']/following-sibling::li[1]</xpath>
-
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Extra:']/following-sibling::li[1]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <value>
                     <li Class="XmlExtensions.Setting.Section">
                         <settings>
@@ -103,8 +103,8 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Post Process Curve:']/following-sibling::li[1]</xpath>
-
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Post Process Curve:']/following-sibling::li[1]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Checkbox">
@@ -129,8 +129,8 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Skill Need Factors Type:']/following-sibling::li[1]</xpath>
-
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Skill Need Factors Type:']/following-sibling::li[1]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Section">

@@ -9,8 +9,8 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationAdd">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
-
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <value>
                     <li Class="XmlExtensions.Action.ApplyOperations">
                         <apply>
@@ -61,8 +61,8 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationAdd">
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
-
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
                 <value>
                     <li Class="XmlExtensions.Action.ApplyOperations">
                         <apply>

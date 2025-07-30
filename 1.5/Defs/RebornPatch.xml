@@ -15,8 +15,8 @@
                 <defaultValue>{defaultState}</defaultValue>
                 <caseTrue>
                     <Operation Class="XmlExtensions.PatchOperationSafeRemove">
-                        <xpath>Defs/StatDef[{type} = "{defName}"]/{capType}/li/max</xpath>
-
+                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/{capType}/li/max</xpath>
+                        <xmlDoc>StatDefs</xmlDoc>
                     </Operation>
                 </caseTrue>
             </Operation>
@@ -37,8 +37,8 @@
                 <defaultValue>{defaultState}</defaultValue>
                 <caseTrue>
                     <Operation Class="XmlExtensions.PatchOperationSafeRemove">
-                        <xpath>Defs/StatDef[{type} = "{defName}"]/maxValue</xpath>
-
+                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/maxValue</xpath>
+                        <xmlDoc>StatDefs</xmlDoc>
                     </Operation>
                 </caseTrue>
             </Operation>
@@ -65,7 +65,7 @@
                         <defaultValue>{defVal}</defaultValue>
                         <apply>
                             <Operation Class="XmlExtensions.PatchOperationReplace">
-                                <xpath>GauranlenTree/ThingDef[{type} = "{defName}"]/comps/li[4]/connectionStrengthGainPerHourPruningBase</xpath>
+                                <xpath>GauranlenTree/ThingDef[{type} = "{defName}"]/comps/li[3]/connectionStrengthGainPerHourPruningBase</xpath>
                                 <xmlDoc>GauranlenTree</xmlDoc>
                                 <value>
                                     <connectionStrengthGainPerHourPruningBase>{{defName}_Num}</connectionStrengthGainPerHourPruningBase>
@@ -93,8 +93,8 @@
                 <defaultValue>{defaultState}</defaultValue>
                 <caseTrue>
                     <Operation Class="XmlExtensions.PatchOperationAdd">
-                        <xpath>Defs/StatDef[{type} = "{defName}"]/postProcessCurve/points</xpath>
-
+                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/postProcessCurve/points</xpath>
+                        <xmlDoc>StatDefs</xmlDoc>
                         <value>
                             <li>(100000, 100000)</li>
                         </value>
@@ -132,8 +132,8 @@
                         </defaultValues>
                         <apply>
                             <Operation Class="XmlExtensions.PatchOperationReplace">
-                                <xpath>Defs/StatDef[{type} = "{defName}"]/skillNeedFactors</xpath>
-
+                                <xpath>StatDefs/StatDef[{type} = "{defName}"]/skillNeedFactors</xpath>
+                                <xmlDoc>StatDefs</xmlDoc>
                                 <value>
                                     <skillNeedFactors>
                                         <li Class="SkillNeed_BaseBonus">
