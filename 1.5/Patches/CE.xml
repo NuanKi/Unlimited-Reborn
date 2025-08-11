@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseTrue>
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>MeleeCritChance</li>
+                    <li>defName</li>
+                    <li>Melee critical chance</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseTrue>
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveMaxValue</patchName>
+                <arguments>
+                    <li>MeleeCritChance</li>
+                    <li>defName</li>
+                    <li>Melee critical chance</li>
+                    <li>false</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseTrue>
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>MeleeParryChance</li>
+                    <li>defName</li>
+                    <li>Melee parry chance</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseTrue>
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveMaxValue</patchName>
+                <arguments>
+                    <li>MeleeParryChance</li>
+                    <li>defName</li>
+                    <li>Melee parry chance</li>
+                    <li>false</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseTrue>
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>UnarmedDamage</li>
+                    <li>defName</li>
+                    <li>Unarmed damage bonus</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <caseTrue>
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveMaxValue</patchName>
+                <arguments>
+                    <li>UnarmedDamage</li>
+                    <li>defName</li>
+                    <li>Unarmed damage bonus</li>
+                    <li>false</li>
+                    <li>Combat</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+</Patch>
