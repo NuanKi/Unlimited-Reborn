@@ -85,6 +85,8 @@
             <li>defaultState</li>
             <li>defName</li>
             <li>type</li>
+            <li>pointVal1</li>
+            <li>pointVal2</li>
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.OptionalPatch">
@@ -96,7 +98,7 @@
                         <xpath>StatDefs/StatDef[{type} = "{defName}"]/postProcessCurve/points</xpath>
                         <xmlDoc>StatDefs</xmlDoc>
                         <value>
-                            <li>(100000, 100000)</li>
+                            <li>({pointVal1}, {pointVal2})</li>
                         </value>
                     </Operation>
                 </caseTrue>

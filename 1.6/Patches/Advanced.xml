@@ -10,6 +10,8 @@
             <li>defName</li>
             <li>Melee hit chance</li>
             <li>false</li>
+            <li>100</li>
+            <li>1</li>
         </arguments>
     </Operation>
 
@@ -21,6 +23,8 @@
             <li>defName</li>
             <li>Melee dodge chance</li>
             <li>false</li>
+            <li>100</li>
+            <li>1</li>
         </arguments>
     </Operation>
 
@@ -32,6 +36,8 @@
             <li>defName</li>
             <li>Shooting accuracy</li>
             <li>false</li>
+            <li>100</li>
+            <li>1</li>
         </arguments>
     </Operation>
     <!--  Stats Pawn WorkGeneral -->
@@ -43,6 +49,8 @@
             <li>defName</li>
             <li>Hunting stealth</li>
             <li>false</li>
+            <li>100</li>
+            <li>1</li>
         </arguments>
     </Operation>
 
@@ -55,6 +63,8 @@
             <li>defName</li>
             <li>Medical tend quality</li>
             <li>false</li>
+            <li>100</li>
+            <li>1</li>
         </arguments>
     </Operation>
 
@@ -67,6 +77,8 @@
             <li>defName</li>
             <li>Cooking speed</li>
             <li>false</li>
+            <li>100</li>
+            <li>1</li>
         </arguments>
     </Operation>
 

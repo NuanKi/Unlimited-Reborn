@@ -142,6 +142,8 @@
             <li>type</li>
             <li>label</li>
             <li>defaultState</li>
+            <li>pointVal1</li>
+            <li>pointVal2</li>
         </parameters>
         <apply>
             <!--Apply PostProcessPatch Patch-->
@@ -151,6 +153,8 @@
                     <li>{defaultState}</li>
                     <li>{defName}</li>
                     <li>{type}</li>
+                    <li>{pointVal1}</li>
+                    <li>{pointVal2}</li>
                 </arguments>
             </Operation>
 
@@ -161,6 +165,8 @@
                     <li>{defaultState}</li>
                     <li>{defName}</li>
                     <li>{label}</li>
+                    <li>{pointVal1}</li>
+                    <li>{pointVal2}</li>
                 </arguments>
             </Operation>
         </apply>

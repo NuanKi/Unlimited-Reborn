@@ -95,11 +95,37 @@
     </XmlExtensions.PatchDef>
 
     <!--  Post Process Settings  -->
+<!--    <XmlExtensions.PatchDef Name="Reborn_PostProcessSettings" Abstract="True">-->
+<!--        <parameters>-->
+<!--            <li>defaultState</li>-->
+<!--            <li>defName</li>-->
+<!--            <li>label</li>-->
+<!--        </parameters>-->
+<!--        <apply>-->
+<!--            <Operation Class="XmlExtensions.PatchOperationInsert">-->
+<!--                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Post Process Curve:']/following-sibling::li[1]</xpath>-->
+<!--                <xmlDoc>RebornMenu</xmlDoc>-->
+<!--                <order>Prepend</order>-->
+<!--                <value>-->
+<!--                    <li Class="XmlExtensions.Setting.Checkbox">-->
+<!--                        <key>{defName}_PostProcessCurve</key>-->
+<!--                        <label>{label} - Make Unlimited</label>-->
+<!--                        <defaultValue>{defaultState}</defaultValue>-->
+<!--                        <tKey>TRUR_{defName}_PostProcessCurve</tKey>-->
+<!--                    </li>-->
+<!--                </value>-->
+<!--            </Operation>-->
+<!--        </apply>-->
+<!--    </XmlExtensions.PatchDef>-->
+
+    <!--  Post Process Settings  -->
     <XmlExtensions.PatchDef Name="Reborn_PostProcessSettings" Abstract="True">
         <parameters>
             <li>defaultState</li>
             <li>defName</li>
             <li>label</li>
+            <li>pointVal1</li>
+            <li>pointVal2</li>
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
@@ -107,11 +133,41 @@
                 <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
-                    <li Class="XmlExtensions.Setting.Checkbox">
-                        <key>{defName}_PostProcessCurve</key>
-                        <label>{label} - Make Unlimited</label>
-                        <defaultValue>{defaultState}</defaultValue>
-                        <tKey>TRUR_{defName}_PostProcessCurve</tKey>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_PostProcessCurve</key>
+                                <label>{label} - Make Unlimited</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tKey>TRUR_{defName}_PostProcessCurve</tKey>
+                            </li>
+                            <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                <key>{defName}_PostProcessCurve</key>
+                                <caseTrue>
+                                    <li Class="XmlExtensions.Setting.Numeric">
+                                        <key>{defName}_PointValue1</key>
+                                        <label>Point Value 1:</label>
+                                        <defaultValue>{pointVal1}</defaultValue>
+                                        <decimals>0</decimals>
+                                        <min>0</min>
+                                        <max>100000</max>
+                                        <tKey>TRUR_{defName}_PointValue1</tKey>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Numeric">
+                                        <key>{defName}_PointValue2</key>
+                                        <label>Point Value 2:</label>
+                                        <defaultValue>{pointVal2}</defaultValue>
+                                        <decimals>2</decimals>
+                                        <min>0</min>
+                                        <max>100000</max>
+                                        <tKey>TRUR_{defName}_PointValue2</tKey>
+                                    </li>
+                                </caseTrue>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Gap">
+                        <spacing>6</spacing>
                     </li>
                 </value>
             </Operation>
