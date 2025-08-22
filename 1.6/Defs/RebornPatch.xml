@@ -94,12 +94,25 @@
                 <key>{defName}_PostProcessCurve</key>
                 <defaultValue>{defaultState}</defaultValue>
                 <caseTrue>
-                    <Operation Class="XmlExtensions.PatchOperationAdd">
-                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/postProcessCurve/points</xpath>
-                        <xmlDoc>StatDefs</xmlDoc>
-                        <value>
-                            <li>({pointVal1}, {pointVal2})</li>
-                        </value>
+                    <Operation Class="XmlExtensions.UseSettings">
+                        <modId>NuanKi.UnlimitedReborn</modId>
+                        <keys>
+                            <li>{defName}_pointVal1</li>
+                            <li>{defName}_pointVal2</li>
+                        </keys>
+                        <defaultValues>
+                            <li>{pointVal1}</li>
+                            <li>{pointVal2}</li>
+                        </defaultValues>
+                        <apply>
+                            <Operation Class="XmlExtensions.PatchOperationAdd">
+                                <xpath>StatDefs/StatDef[{type} = "{defName}"]/postProcessCurve/points</xpath>
+                                <xmlDoc>StatDefs</xmlDoc>
+                                <value>
+                                    <li>({{defName}_pointVal1}, {{defName}_pointVal2})</li>
+                                </value>
+                            </Operation>
+                        </apply>
                     </Operation>
                 </caseTrue>
             </Operation>

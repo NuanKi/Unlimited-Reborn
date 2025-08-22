@@ -49,6 +49,92 @@
         </apply>
     </XmlExtensions.PatchDef>
 
+    <!-- Injecting real-time Post Process actions -->
+    <XmlExtensions.PatchDef Name="Reborn_InjectPostProcess" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>type</li>
+            <li>pointVal1</li>
+            <li>pointVal2</li>
+            <li>postProcessIndex</li>
+        </parameters>
+        <apply>
+            <Operation Class="XmlExtensions.PatchOperationAdd">
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[defName="UnlimitedReborn"]/postCloseActions</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
+                <value>
+                    <li Class="XmlExtensions.Action.ApplyOperations">
+                        <apply>
+                            <Operation Class="XmlExtensions.OptionalPatch">
+                                <modId>NuanKi.UnlimitedReborn</modId>
+                                <key>{defName}_PostProcessCurve</key>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <caseTrue>
+                                    <Operation Class="XmlExtensions.DefDatabaseConditional">
+                                        <objPath>StatDef/[defName="{defName}"]/postProcessCurve/points/[{postProcessIndex}]</objPath>
+                                        <caseTrue>
+                                            <Operation Class="XmlExtensions.UseSettings">
+                                                <modId>NuanKi.UnlimitedReborn</modId>
+                                                <keys>
+                                                    <li>{defName}_pointVal1</li>
+                                                    <li>{defName}_pointVal2</li>
+                                                </keys>
+                                                <defaultValues>
+                                                    <li>{pointVal1}</li>
+                                                    <li>{pointVal2}</li>
+                                                </defaultValues>
+                                                <apply>
+                                                    <Operation Class="XmlExtensions.DefDatabaseOperationReplace">
+                                                        <objPath>StatDef/[defName="{defName}"]/postProcessCurve/points/[{postProcessIndex}]</objPath>
+                                                        <value>
+                                                            <li>({{defName}_pointVal1}, {{defName}_pointVal2})</li>
+                                                        </value>
+                                                    </Operation>
+                                                </apply>
+                                            </Operation>
+                                        </caseTrue>
+                                        <caseFalse>
+                                            <Operation Class="XmlExtensions.UseSettings">
+                                                <modId>NuanKi.UnlimitedReborn</modId>
+                                                <keys>
+                                                    <li>{defName}_pointVal1</li>
+                                                    <li>{defName}_pointVal2</li>
+                                                </keys>
+                                                <defaultValues>
+                                                    <li>{pointVal1}</li>
+                                                    <li>{pointVal2}</li>
+                                                </defaultValues>
+                                                <apply>
+                                                    <Operation Class="XmlExtensions.DefDatabaseOperationAdd">
+                                                        <objPath>StatDef/[defName="{defName}"]/postProcessCurve/points</objPath>
+                                                        <value>
+                                                            <li>({{defName}_pointVal1}, {{defName}_pointVal2})</li>
+                                                        </value>
+                                                    </Operation>
+                                                </apply>
+                                            </Operation>
+                                        </caseFalse>
+                                    </Operation>
+                                </caseTrue>
+                                <caseFalse>
+                                    <Operation Class="XmlExtensions.DefDatabaseConditional">
+                                        <objPath>StatDef/[defName="{defName}"]/postProcessCurve/points/[{postProcessIndex}]</objPath>
+                                        <caseTrue>
+                                            <Operation Class="XmlExtensions.DefDatabaseOperationRemove">
+                                                <objPath>StatDef/[defName="{defName}"]/postProcessCurve/points/[{postProcessIndex}]</objPath>
+                                            </Operation>
+                                        </caseTrue>
+                                    </Operation>
+                                </caseFalse>
+                            </Operation>
+                        </apply>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
     <!-- Injecting real-time skill factors actions -->
     <XmlExtensions.PatchDef Name="Reborn_InjectSkillFactors" Abstract="True">
         <parameters>

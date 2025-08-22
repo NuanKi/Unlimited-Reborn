@@ -144,6 +144,7 @@
             <li>defaultState</li>
             <li>pointVal1</li>
             <li>pointVal2</li>
+            <li>postProcessIndex</li>
         </parameters>
         <apply>
             <!--Apply PostProcessPatch Patch-->
@@ -167,6 +168,19 @@
                     <li>{label}</li>
                     <li>{pointVal1}</li>
                     <li>{pointVal2}</li>
+                </arguments>
+            </Operation>
+
+            <!--Inject Real Time Actions-->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_InjectPostProcess</patchName>
+                <arguments>
+                    <li>{defaultState}</li>
+                    <li>{defName}</li>
+                    <li>{label}</li>
+                    <li>{pointVal1}</li>
+                    <li>{pointVal2}</li>
+                    <li>{postProcessIndex}</li>
                 </arguments>
             </Operation>
         </apply>

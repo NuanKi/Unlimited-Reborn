@@ -12,6 +12,7 @@
             <li>false</li>
             <li>100</li>
             <li>1</li>
+            <li>8</li>
         </arguments>
     </Operation>
 
@@ -25,6 +26,7 @@
             <li>false</li>
             <li>100</li>
             <li>1</li>
+            <li>4</li>
         </arguments>
     </Operation>
 
@@ -38,6 +40,7 @@
             <li>false</li>
             <li>100</li>
             <li>1</li>
+            <li>22</li>
         </arguments>
     </Operation>
     <!--  Stats Pawn WorkGeneral -->
@@ -51,6 +54,7 @@
             <li>false</li>
             <li>2</li>
             <li>1</li>
+            <li>6</li>
         </arguments>
     </Operation>
 
@@ -64,6 +68,7 @@
             <li>Medical tend quality</li>
             <li>false</li>
             <li>10</li>
+            <li>5</li>
             <li>5</li>
         </arguments>
     </Operation>
@@ -79,6 +84,7 @@
             <li>false</li>
             <li>100</li>
             <li>3</li>
+            <li>4</li>
         </arguments>
     </Operation>
 
