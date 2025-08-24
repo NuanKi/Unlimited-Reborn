@@ -54,6 +54,11 @@
             </li>
             <li Class="XmlExtensions.Setting.GapLine"/>
             <li Class="XmlExtensions.Setting.Text">
+                <text>Odyssey:</text>
+                <tKey>TRUR_Odyssey</tKey>
+            </li>
+            <li Class="XmlExtensions.Setting.GapLine"/>
+            <li Class="XmlExtensions.Setting.Text">
                 <text>Extra:</text>
                 <tKey>TRUR_Extra</tKey>
             </li>

@@ -205,4 +205,25 @@
             </Operation>
         </caseTrue>
     </Operation>
+
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Odyssey</li>
+        </mods>
+        <caseTrue>
+            <!--  FishingYield  -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_SkillNeedFactors</patchName>
+                <arguments>
+                    <li>FishingYield</li>
+                    <li>defName</li>
+                    <li>Fishing yield</li>
+                    <li>false</li>
+                    <li>Animals</li>
+                    <li>0.75</li>
+                    <li>0.025</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
 </Patch>

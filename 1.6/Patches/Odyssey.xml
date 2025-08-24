@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="XmlExtensions.FindMod">
+        <mods>
+            <li>Odyssey</li>
+        </mods>
+        <caseTrue>
+            <!-- Stats Pawns Odyssey -->
+            <!-- Stats Pawns General -->
+
+            <!-- VacuumResistance MaxValue -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveMaxValue</patchName>
+                <arguments>
+                    <li>VacuumResistance</li>
+                    <li>defName</li>
+                    <li>Vacuum Resistance</li>
+                    <li>false</li>
+                    <li>Odyssey</li>
+                </arguments>
+            </Operation>
+
+            <!-- PilotingAbility CapacityFactors -->
+            <Operation Class="XmlExtensions.ApplyPatch">
+                <patchName>Reborn_RemoveLimit</patchName>
+                <arguments>
+                    <li>PilotingAbility</li>
+                    <li>defName</li>
+                    <li>Piloting Ability</li>
+                    <li>true</li>
+                    <li>capacityFactors</li>
+                    <li>Odyssey</li>
+                </arguments>
+            </Operation>
+        </caseTrue>
+    </Operation>
+</Patch>
