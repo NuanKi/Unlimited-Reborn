@@ -15,7 +15,7 @@
                 <defaultValue>{defaultState}</defaultValue>
                 <caseTrue>
                     <Operation Class="XmlExtensions.PatchOperationSafeRemove">
-                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/{capType}/li/max</xpath>
+                        <xpath>StatDefs/StatDef[{type} = "{defName}"]/{capType}//max</xpath>
                         <xmlDoc>StatDefs</xmlDoc>
                     </Operation>
                 </caseTrue>
