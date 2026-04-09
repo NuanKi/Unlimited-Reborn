@@ -10,15 +10,19 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]</xpath>
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='{tag}']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
                 <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
-                    <li Class="XmlExtensions.Setting.Checkbox">
-                        <key>{defName}_Caps</key>
-                        <label>{label} - Remove Limit</label>
-                        <defaultValue>{defaultState}</defaultValue>
-                        <tKey>TRUR_{defName}_Caps</tKey>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_Caps</key>
+                                <label>{label} - Remove Limit</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tKey>TRUR_{defName}_Caps</tKey>
+                            </li>
+                        </settings>
                     </li>
                 </value>
             </Operation>
@@ -35,15 +39,19 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='{tag}:']/following-sibling::li[1]</xpath>
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='{tag}']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
                 <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
-                    <li Class="XmlExtensions.Setting.Checkbox">
-                        <key>{defName}_Max</key>
-                        <label>{label} - Remove Max Value</label>
-                        <defaultValue>{defaultState}</defaultValue>
-                        <tKey>TRUR_{defName}_Max</tKey>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_Max</key>
+                                <label>{label} - Remove Max Value</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tKey>TRUR_{defName}_Max</tKey>
+                            </li>
+                        </settings>
                     </li>
                 </value>
             </Operation>
@@ -60,8 +68,9 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Extra:']/following-sibling::li[1]</xpath>
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li[label='Advanced']/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='Advanced_DoublePruning']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
                 <xmlDoc>RebornMenu</xmlDoc>
+                <order>Prepend</order>
                 <value>
                     <li Class="XmlExtensions.Setting.Section">
                         <settings>
@@ -105,7 +114,7 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Post Process Curve:']/following-sibling::li[1]</xpath>
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li[label='Advanced']/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='Advanced_PostProcess']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
                 <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
@@ -142,9 +151,6 @@
                             </li>
                         </settings>
                     </li>
-                    <li Class="XmlExtensions.Setting.Gap">
-                        <spacing>6</spacing>
-                    </li>
                 </value>
             </Operation>
         </apply>
@@ -161,7 +167,7 @@
         </parameters>
         <apply>
             <Operation Class="XmlExtensions.PatchOperationInsert">
-                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[text='Skill Need Factors Type:']/following-sibling::li[1]</xpath>
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li[label='Advanced']/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='Advanced_SkillNeedFactors']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
                 <xmlDoc>RebornMenu</xmlDoc>
                 <order>Prepend</order>
                 <value>
@@ -200,8 +206,121 @@
                             </li>
                         </settings>
                     </li>
-                    <li Class="XmlExtensions.Setting.Gap">
-                        <spacing>6</spacing>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <!-- Ideology Limit Settings -->
+    <XmlExtensions.PatchDef Name="Reborn_IdeologyLimitSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+            <li>tag</li>
+        </parameters>
+        <apply>
+            <Operation Class="XmlExtensions.PatchOperationInsert">
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li[label='Ideology']/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='{tag}']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
+                <order>Prepend</order>
+                <value>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_Caps</key>
+                                <label>{label} - Remove Limit</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tKey>TRUR_{defName}_Caps</tKey>
+                            </li>
+                        </settings>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <!-- Ideology Max Value Settings -->
+    <XmlExtensions.PatchDef Name="Reborn_IdeologyMaxValueSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+            <li>tag</li>
+        </parameters>
+        <apply>
+            <Operation Class="XmlExtensions.PatchOperationInsert">
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li[label='Ideology']/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='{tag}']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
+                <order>Prepend</order>
+                <value>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_Max</key>
+                                <label>{label} - Remove Max Value</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tKey>TRUR_{defName}_Max</tKey>
+                            </li>
+                        </settings>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <!-- Odyssey Limit Settings -->
+    <XmlExtensions.PatchDef Name="Reborn_OdysseyLimitSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+            <li>tag</li>
+        </parameters>
+        <apply>
+            <Operation Class="XmlExtensions.PatchOperationInsert">
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li[label='Odyssey']/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='{tag}']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
+                <order>Prepend</order>
+                <value>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_Caps</key>
+                                <label>{label} - Remove Limit</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tKey>TRUR_{defName}_Caps</tKey>
+                            </li>
+                        </settings>
+                    </li>
+                </value>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+
+    <!-- Odyssey Max Value Settings -->
+    <XmlExtensions.PatchDef Name="Reborn_OdysseyMaxValueSettings" Abstract="True">
+        <parameters>
+            <li>defaultState</li>
+            <li>defName</li>
+            <li>label</li>
+            <li>tag</li>
+        </parameters>
+        <apply>
+            <Operation Class="XmlExtensions.PatchOperationInsert">
+                <xpath>RebornMenu/XmlExtensions.SettingsMenuDef[modId="NuanKi.UnlimitedReborn"]/settings/li[@Class="XmlExtensions.Setting.TabView"]/tabs/li[label='Odyssey']/settings/li[@Class="XmlExtensions.Setting.CollapsibleSettings" and tag='{tag}']/settings/li[@Class="XmlExtensions.Setting.GapLine"]</xpath>
+                <xmlDoc>RebornMenu</xmlDoc>
+                <order>Prepend</order>
+                <value>
+                    <li Class="XmlExtensions.Setting.Section">
+                        <settings>
+                            <li Class="XmlExtensions.Setting.Checkbox">
+                                <key>{defName}_Max</key>
+                                <label>{label} - Remove Max Value</label>
+                                <defaultValue>{defaultState}</defaultValue>
+                                <tKey>TRUR_{defName}_Max</tKey>
+                            </li>
+                        </settings>
                     </li>
                 </value>
             </Operation>

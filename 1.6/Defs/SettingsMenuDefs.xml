@@ -12,86 +12,123 @@
                 <anchor>Middle</anchor>
                 <tKey>TRUR_SettingsMenu</tKey>
             </li>
+            <li Class="XmlExtensions.Setting.Searchbox"/>
             <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Apparel:</text>
-                <tKey>TRUR_Apparel</tKey>
+            <li Class="XmlExtensions.Setting.TabView">
+                <defaultTab>1</defaultTab>
+                <tabs>
+                    <li>
+                        <label>Vanilla</label>
+                        <settings>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Apparel</label>
+                                <tag>Vanilla_Apparel</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Combat</label>
+                                <tag>Vanilla_Combat</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>General</label>
+                                <tag>Vanilla_General</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Social</label>
+                                <tag>Vanilla_Social</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Work General</label>
+                                <tag>Vanilla_WorkGeneral</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Work Medical</label>
+                                <tag>Vanilla_WorkMedical</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Work Recipes</label>
+                                <tag>Vanilla_WorkRecipes</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                        </settings>
+                    </li>
+                    <li>
+                        <label>Ideology</label>
+                        <settings>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Stats Pawns Ideo</label>
+                                <tag>Ideology_PawnsIdeo</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Stats Pawns WorkGeneral</label>
+                                <tag>Ideology_WorkGeneral</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                        </settings>
+                    </li>
+                    <li>
+                        <label>Odyssey</label>
+                        <settings>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Stats Pawns General</label>
+                                <tag>Odyssey_General</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                        </settings>
+                    </li>
+                    <li>
+                        <label>Advanced</label>
+                        <settings>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Unlimited postProcessCurve</label>
+                                <tag>Advanced_PostProcess</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>ChangeSkillNeedFactors</label>
+                                <tag>Advanced_SkillNeedFactors</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.CollapsibleSettings">
+                                <label>Double Pruning</label>
+                                <tag>Advanced_DoublePruning</tag>
+                                <defaultState>Open</defaultState>
+                                <settings><li Class="XmlExtensions.Setting.GapLine"/></settings>
+                            </li>
+                            <li Class="XmlExtensions.Setting.GapLine"/>
+                            <li Class="XmlExtensions.Setting.Text">
+                                <text>For more info see the Wiki</text>
+                                <tKey>TRUR_Wiki</tKey>
+                            </li>
+                            <li Class="XmlExtensions.Setting.GapLine"/>
+                            <li Class="XmlExtensions.Setting.ResetSettings"/>
+                            <li Class="XmlExtensions.Setting.GapLine"/>
+                            <li Class="XmlExtensions.Setting.Text">
+                                <text>Restarting game is required to apply some changes.</text>
+                                <tKey>TRUR_RestartRequired</tKey>
+                            </li>
+                        </settings>
+                    </li>
+                </tabs>
             </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Combat:</text>
-                <tKey>TRUR_Combat</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>General:</text>
-                <tKey>TRUR_General</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Social:</text>
-                <tKey>TRUR_Social</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Work General:</text>
-                <tKey>TRUR_WorkGeneral</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Work Medical:</text>
-                <tKey>TRUR_WorkMedical</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Work Recipes:</text>
-                <tKey>TRUR_WorkRecipes</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Ideology:</text>
-                <tKey>TRUR_Ideology</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Odyssey:</text>
-                <tKey>TRUR_Odyssey</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Extra:</text>
-                <tKey>TRUR_Extra</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Advanced</text>
-                <font>Medium</font>
-                <anchor>Middle</anchor>
-                <tKey>TRUR_Advanced</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Post Process Curve:</text>
-                <tKey>TRUR_PostProcessCurve</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Skill Need Factors Type:</text>
-                <tKey>TRUR_SkillNeedFactorsType</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>For more info see the Wiki</text>
-                <tKey>TRUR_Wiki</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.ResetSettings"/>
-            <li Class="XmlExtensions.Setting.GapLine"/>
-            <li Class="XmlExtensions.Setting.Text">
-                <text>Restarting game is required to apply some changes.</text>
-                <tKey>TRUR_RestartRequired</tKey>
-            </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
         </settings>
         <postCloseActions/>
     </XmlExtensions.SettingsMenuDef>

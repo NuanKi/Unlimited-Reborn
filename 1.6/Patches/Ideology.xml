@@ -15,7 +15,7 @@
                     <li>Conversion power</li>
                     <li>true</li>
                     <li>capacityFactors</li>
-                    <li>Ideology</li>
+                    <li>Ideology_PawnsIdeo</li>
                 </arguments>
             </Operation>
 
@@ -28,7 +28,7 @@
                     <li>defName</li>
                     <li>Suppression power</li>
                     <li>true</li>
-                    <li>Ideology</li>
+                    <li>Ideology_WorkGeneral</li>
                 </arguments>
             </Operation>
 
@@ -41,7 +41,7 @@
                     <li>Hacking speed</li>
                     <li>true</li>
                     <li>capacityFactors</li>
-                    <li>Ideology</li>
+                    <li>Ideology_WorkGeneral</li>
                 </arguments>
             </Operation>
         </caseTrue>

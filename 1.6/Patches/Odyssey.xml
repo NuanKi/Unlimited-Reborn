@@ -16,7 +16,7 @@
                     <li>defName</li>
                     <li>Vacuum Resistance</li>
                     <li>false</li>
-                    <li>Odyssey</li>
+                    <li>Odyssey_General</li>
                 </arguments>
             </Operation>
 
@@ -29,7 +29,7 @@
                     <li>Piloting Ability</li>
                     <li>true</li>
                     <li>capacityFactors</li>
-                    <li>Odyssey</li>
+                    <li>Odyssey_General</li>
                 </arguments>
             </Operation>
         </caseTrue>
